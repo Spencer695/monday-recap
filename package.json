@@ -1,0 +1,12 @@
+{
+  "name": "monday-recap",
+  "version": "1.0.0",
+  "description": "Turn a Shopify orders export into a weekly sales report with a plain English summary.",
+  "private": true,
+  "scripts": {
+    "test": "node test/report.test.js"
+  },
+  "devDependencies": {
+    "papaparse": "5.4.1"
+  }
+}

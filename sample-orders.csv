@@ -1,0 +1,753 @@
+Name,Email,Financial Status,Paid at,Fulfillment Status,Currency,Subtotal,Shipping,Taxes,Total,Discount Code,Discount Amount,Created at,Lineitem quantity,Lineitem name,Lineitem price,Refunded Amount,Canceled at,Source
+#1001,customer1@example.com,paid,2026-08-03 08:52:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-08-03 08:52:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1002,customer2@example.com,paid,2026-08-03 10:15:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-03 10:15:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1003,customer3@example.com,paid,2026-08-03 11:57:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-03 11:57:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1004,,partially_refunded,2026-08-03 21:48:00 -0700,fulfilled,USD,60.00,0.00,4.65,64.65,,0.00,2026-08-03 21:48:00 -0700,2,Embroidered Dad Hat,30.00,32.32,,pos
+#1005,customer4@example.com,paid,2026-08-03 14:35:00 -0700,fulfilled,USD,80.00,0.00,6.20,86.20,,0.00,2026-08-03 14:35:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1005,customer4@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1006,customer5@example.com,paid,2026-08-03 17:58:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-03 17:58:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1007,customer6@example.com,voided,,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-08-04 14:57:00 -0700,2,Sticker Pack,8.00,0.00,2026-08-04 14:57:00 -0700,web
+#1008,customer7@example.com,paid,2026-08-04 08:36:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-04 08:36:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1009,,paid,2026-08-04 20:24:00 -0700,fulfilled,USD,14.00,0.00,1.09,15.09,,0.00,2026-08-04 20:24:00 -0700,1,Enamel Pin Set,14.00,0.00,,pos
+#1010,customer8@example.com,paid,2026-08-04 08:50:00 -0700,fulfilled,USD,42.00,6.95,3.26,52.21,,0.00,2026-08-04 08:50:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1010,customer8@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1011,customer9@example.com,paid,2026-08-04 11:05:00 -0700,fulfilled,USD,74.00,6.95,5.74,86.69,,0.00,2026-08-04 11:05:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1011,customer9@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1012,customer10@example.com,paid,2026-08-04 11:01:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-04 11:01:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1013,customer11@example.com,paid,2026-08-05 12:15:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-05 12:15:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1014,customer12@example.com,paid,2026-08-05 20:51:00 -0700,fulfilled,USD,82.80,0.00,6.42,89.22,WELCOME10,9.20,2026-08-05 20:51:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1014,customer12@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1015,customer13@example.com,paid,2026-08-05 18:16:00 -0700,fulfilled,USD,136.00,0.00,10.54,146.54,,0.00,2026-08-05 18:16:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1015,customer13@example.com,,,,,,,,,,,,2,Canvas Tote,22.00,,,
+#1015,customer13@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1016,customer14@example.com,paid,2026-08-05 18:52:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,FREESHIP,0.00,2026-08-05 18:52:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1016,customer14@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1017,customer15@example.com,paid,2026-08-05 21:48:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-05 21:48:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1018,customer16@example.com,paid,2026-08-06 12:20:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-06 12:20:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1019,customer17@example.com,paid,2026-08-06 17:42:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-06 17:42:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1019,customer17@example.com,,,,,,,,,,,,2,Sticker Pack,8.00,,,
+#1020,customer18@example.com,paid,2026-08-06 08:21:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-06 08:21:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1021,customer19@example.com,paid,2026-08-06 19:52:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-06 19:52:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1022,customer4@example.com,paid,2026-08-06 15:06:00 -0700,fulfilled,USD,44.00,6.95,3.41,54.36,,0.00,2026-08-06 15:06:00 -0700,2,Canvas Tote,22.00,0.00,,web
+#1023,customer20@example.com,paid,2026-08-07 14:11:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-08-07 14:11:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1023,customer20@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1024,customer21@example.com,paid,2026-08-07 11:32:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-07 11:32:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1025,customer4@example.com,paid,2026-08-07 09:42:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-07 09:42:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1026,customer22@example.com,paid,2026-08-07 09:14:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-08-07 09:14:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1027,customer23@example.com,paid,2026-08-07 14:35:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-07 14:35:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1028,customer24@example.com,paid,2026-08-07 08:09:00 -0700,fulfilled,USD,86.00,0.00,6.67,92.67,,0.00,2026-08-07 08:09:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1028,customer24@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1029,customer25@example.com,paid,2026-08-07 19:21:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-07 19:21:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1030,customer26@example.com,paid,2026-08-08 13:54:00 -0700,fulfilled,USD,42.00,6.95,3.26,52.21,,0.00,2026-08-08 13:54:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1030,customer26@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1031,customer7@example.com,paid,2026-08-08 18:48:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-08-08 18:48:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1032,customer27@example.com,paid,2026-08-08 12:13:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-08 12:13:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1033,customer28@example.com,paid,2026-08-08 19:46:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-08 19:46:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1034,customer29@example.com,paid,2026-08-08 16:14:00 -0700,fulfilled,USD,80.00,0.00,6.20,86.20,,0.00,2026-08-08 16:14:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1034,customer29@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1035,customer25@example.com,paid,2026-08-08 20:01:00 -0700,fulfilled,USD,44.00,6.95,3.41,54.36,,0.00,2026-08-08 20:01:00 -0700,2,Canvas Tote,22.00,0.00,,web
+#1036,customer30@example.com,paid,2026-08-08 15:16:00 -0700,fulfilled,USD,164.00,0.00,12.71,176.71,,0.00,2026-08-08 15:16:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1036,customer30@example.com,,,,,,,,,,,,3,Crewneck Sweatshirt,52.00,,,
+#1037,customer31@example.com,paid,2026-08-08 09:20:00 -0700,fulfilled,USD,104.00,0.00,8.06,112.06,,0.00,2026-08-08 09:20:00 -0700,2,Crewneck Sweatshirt,52.00,0.00,,web
+#1038,customer32@example.com,paid,2026-08-08 21:29:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-08 21:29:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1039,customer31@example.com,paid,2026-08-08 15:43:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-08 15:43:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1040,customer33@example.com,paid,2026-08-08 14:30:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-08-08 14:30:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1041,customer25@example.com,paid,2026-08-09 09:31:00 -0700,fulfilled,USD,70.00,6.95,5.43,82.38,,0.00,2026-08-09 09:31:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1041,customer25@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1042,customer28@example.com,partially_refunded,2026-08-09 18:58:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-08-09 18:58:00 -0700,1,Enamel Pin Set,14.00,15.09,,web
+#1043,customer29@example.com,paid,2026-08-09 12:38:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-08-09 12:38:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1043,customer29@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1043,customer29@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1044,customer34@example.com,paid,2026-08-09 20:48:00 -0700,fulfilled,USD,50.40,6.95,3.91,61.26,WELCOME10,5.60,2026-08-09 20:48:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1045,customer35@example.com,paid,2026-08-09 14:10:00 -0700,fulfilled,USD,192.00,0.00,14.88,206.88,,0.00,2026-08-09 14:10:00 -0700,3,Heavyweight Hoodie,64.00,0.00,,web
+#1046,customer26@example.com,refunded,2026-08-09 21:45:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-08-09 21:45:00 -0700,1,Classic Logo Tee,28.00,60.83,,web
+#1046,customer26@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1047,customer36@example.com,paid,2026-08-10 20:55:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-08-10 20:55:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1048,,paid,2026-08-10 11:35:00 -0700,fulfilled,USD,22.00,0.00,1.71,23.71,,0.00,2026-08-10 11:35:00 -0700,1,Canvas Tote,22.00,0.00,,pos
+#1049,customer37@example.com,paid,2026-08-10 13:26:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-10 13:26:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1050,customer23@example.com,paid,2026-08-11 15:17:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-11 15:17:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1051,customer38@example.com,paid,2026-08-11 21:56:00 -0700,fulfilled,USD,36.00,6.95,2.79,45.74,,0.00,2026-08-11 21:56:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1051,customer38@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1052,customer39@example.com,paid,2026-08-11 08:49:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-11 08:49:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1053,customer40@example.com,partially_refunded,2026-08-11 17:44:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-11 17:44:00 -0700,1,Heavyweight Hoodie,64.00,68.96,,web
+#1054,customer9@example.com,paid,2026-08-12 08:13:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-12 08:13:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1055,customer41@example.com,refunded,2026-08-12 16:02:00 -0700,fulfilled,USD,96.00,0.00,7.44,103.44,,0.00,2026-08-12 16:02:00 -0700,1,Embroidered Dad Hat,30.00,103.44,,web
+#1055,customer41@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1055,customer41@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1056,customer42@example.com,paid,2026-08-12 21:23:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-12 21:23:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1057,customer43@example.com,paid,2026-08-12 20:54:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-12 20:54:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1058,,paid,2026-08-12 19:38:00 -0700,fulfilled,USD,30.00,0.00,2.33,32.33,,0.00,2026-08-12 19:38:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,pos
+#1059,customer44@example.com,paid,2026-08-12 21:15:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-12 21:15:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1060,customer39@example.com,paid,2026-08-13 16:54:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-13 16:54:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1061,customer45@example.com,paid,2026-08-13 15:39:00 -0700,fulfilled,USD,46.80,6.95,3.63,57.38,WELCOME10,5.20,2026-08-13 15:39:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1062,customer46@example.com,paid,2026-08-13 18:05:00 -0700,fulfilled,USD,72.00,6.95,5.58,84.53,,0.00,2026-08-13 18:05:00 -0700,2,Enamel Pin Set,14.00,0.00,,web
+#1062,customer46@example.com,,,,,,,,,,,,2,Canvas Tote,22.00,,,
+#1063,customer30@example.com,paid,2026-08-13 14:07:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-08-13 14:07:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1064,customer22@example.com,refunded,2026-08-13 10:06:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-13 10:06:00 -0700,1,Classic Logo Tee,28.00,37.12,,web
+#1065,customer47@example.com,paid,2026-08-14 09:22:00 -0700,fulfilled,USD,25.20,6.95,1.95,34.10,WELCOME10,2.80,2026-08-14 09:22:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1066,customer48@example.com,paid,2026-08-14 16:07:00 -0700,fulfilled,USD,44.00,6.95,3.41,54.36,,0.00,2026-08-14 16:07:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1066,customer48@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1067,customer49@example.com,paid,2026-08-14 14:01:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-14 14:01:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1068,customer17@example.com,paid,2026-08-14 14:08:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-08-14 14:08:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1068,customer17@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1069,customer50@example.com,paid,2026-08-14 21:50:00 -0700,fulfilled,USD,19.80,6.95,1.53,28.28,WELCOME10,2.20,2026-08-14 21:50:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1070,customer51@example.com,paid,2026-08-14 11:58:00 -0700,fulfilled,USD,27.00,6.95,2.09,36.04,WELCOME10,3.00,2026-08-14 11:58:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1071,customer52@example.com,paid,2026-08-14 20:13:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-08-14 20:13:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1072,customer53@example.com,paid,2026-08-15 12:39:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-15 12:39:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1073,customer54@example.com,paid,2026-08-15 20:49:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-08-15 20:49:00 -0700,2,Enamel Pin Set,14.00,0.00,,web
+#1073,customer54@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1074,customer55@example.com,paid,2026-08-15 13:50:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-15 13:50:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1075,customer13@example.com,paid,2026-08-15 09:40:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-15 09:40:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1076,customer56@example.com,paid,2026-08-15 09:13:00 -0700,fulfilled,USD,50.40,6.95,3.91,61.26,WELCOME10,5.60,2026-08-15 09:13:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1077,customer57@example.com,paid,2026-08-15 11:55:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-15 11:55:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1078,customer58@example.com,paid,2026-08-15 13:08:00 -0700,fulfilled,USD,19.80,6.95,1.53,28.28,WELCOME10,2.20,2026-08-15 13:08:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1079,customer44@example.com,paid,2026-08-15 20:47:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-15 20:47:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1080,customer59@example.com,paid,2026-08-15 14:03:00 -0700,fulfilled,USD,120.00,0.00,9.30,129.30,FREESHIP,0.00,2026-08-15 14:03:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1080,customer59@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1081,customer60@example.com,paid,2026-08-15 21:20:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-08-15 21:20:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1081,customer60@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1082,customer54@example.com,refunded,2026-08-15 21:27:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-15 21:27:00 -0700,1,Heavyweight Hoodie,64.00,75.91,,web
+#1083,customer61@example.com,paid,2026-08-16 13:27:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-16 13:27:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1084,customer62@example.com,paid,2026-08-16 14:57:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-08-16 14:57:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1085,customer63@example.com,paid,2026-08-16 11:09:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-16 11:09:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1086,customer64@example.com,paid,2026-08-16 17:47:00 -0700,fulfilled,USD,12.60,6.95,0.98,20.53,WELCOME10,1.40,2026-08-16 17:47:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1087,customer65@example.com,paid,2026-08-16 08:58:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-16 08:58:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1088,customer49@example.com,paid,2026-08-16 19:37:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-08-16 19:37:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1088,customer49@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1088,customer49@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1089,customer66@example.com,paid,2026-08-17 18:53:00 -0700,fulfilled,USD,28.00,0.00,2.17,30.17,FREESHIP,6.95,2026-08-17 18:53:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1090,customer26@example.com,paid,2026-08-17 18:20:00 -0700,fulfilled,USD,38.00,6.95,2.95,47.90,,0.00,2026-08-17 18:20:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1090,customer26@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1091,customer67@example.com,paid,2026-08-17 13:03:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-08-17 13:03:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1092,customer68@example.com,paid,2026-08-17 13:39:00 -0700,fulfilled,USD,75.60,0.00,5.86,81.46,WELCOME10,8.40,2026-08-17 13:39:00 -0700,2,Enamel Pin Set,14.00,0.00,,web
+#1092,customer68@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1093,customer69@example.com,paid,2026-08-18 10:31:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-18 10:31:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1094,,paid,2026-08-18 08:37:00 -0700,fulfilled,USD,22.00,0.00,1.71,23.71,,0.00,2026-08-18 08:37:00 -0700,1,Canvas Tote,22.00,0.00,,pos
+#1095,customer70@example.com,paid,2026-08-18 21:11:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-18 21:11:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1096,customer71@example.com,paid,2026-08-18 18:51:00 -0700,fulfilled,USD,42.00,6.95,3.26,52.21,,0.00,2026-08-18 18:51:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1096,customer71@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1097,,paid,2026-08-18 10:05:00 -0700,fulfilled,USD,64.00,0.00,4.96,68.96,,0.00,2026-08-18 10:05:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,pos
+#1098,customer72@example.com,paid,2026-08-18 18:24:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-18 18:24:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1099,customer73@example.com,paid,2026-08-18 19:02:00 -0700,fulfilled,USD,36.00,6.95,2.79,45.74,,0.00,2026-08-18 19:02:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1099,customer73@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1100,customer26@example.com,paid,2026-08-18 14:45:00 -0700,fulfilled,USD,160.00,0.00,12.40,172.40,FREESHIP,0.00,2026-08-18 14:45:00 -0700,2,Crewneck Sweatshirt,52.00,0.00,,web
+#1100,customer26@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1101,,paid,2026-08-19 16:09:00 -0700,fulfilled,USD,22.00,0.00,1.71,23.71,,0.00,2026-08-19 16:09:00 -0700,1,Canvas Tote,22.00,0.00,,pos
+#1102,customer74@example.com,paid,2026-08-19 17:15:00 -0700,fulfilled,USD,44.00,6.95,3.41,54.36,,0.00,2026-08-19 17:15:00 -0700,2,Canvas Tote,22.00,0.00,,web
+#1103,customer75@example.com,paid,2026-08-19 12:50:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-19 12:50:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1103,customer75@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1103,customer75@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1104,customer29@example.com,voided,,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-19 09:39:00 -0700,1,Classic Logo Tee,28.00,0.00,2026-08-19 09:39:00 -0700,web
+#1105,customer76@example.com,paid,2026-08-19 21:51:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-19 21:51:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1106,customer77@example.com,paid,2026-08-19 08:07:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-08-19 08:07:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1106,customer77@example.com,,,,,,,,,,,,2,Enamel Pin Set,14.00,,,
+#1107,customer78@example.com,paid,2026-08-20 18:27:00 -0700,fulfilled,USD,25.20,6.95,1.95,34.10,WELCOME10,2.80,2026-08-20 18:27:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1108,customer79@example.com,paid,2026-08-20 21:30:00 -0700,fulfilled,USD,74.00,6.95,5.74,86.69,,0.00,2026-08-20 21:30:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1108,customer79@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1109,customer2@example.com,paid,2026-08-20 13:43:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-20 13:43:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1110,,paid,2026-08-20 16:53:00 -0700,fulfilled,USD,58.00,0.00,4.50,62.50,,0.00,2026-08-20 16:53:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1110,,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1111,customer14@example.com,paid,2026-08-20 08:52:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-20 08:52:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1112,customer80@example.com,paid,2026-08-21 21:12:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-21 21:12:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1113,customer81@example.com,voided,,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-08-21 11:41:00 -0700,1,Classic Logo Tee,28.00,0.00,2026-08-21 11:41:00 -0700,web
+#1113,customer81@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1114,customer82@example.com,voided,,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-21 11:56:00 -0700,1,Heavyweight Hoodie,64.00,0.00,2026-08-21 11:56:00 -0700,web
+#1115,customer16@example.com,paid,2026-08-21 08:42:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-21 08:42:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1116,customer9@example.com,paid,2026-08-21 10:30:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-21 10:30:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1117,customer13@example.com,paid,2026-08-21 14:47:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-08-21 14:47:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1117,customer13@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1118,customer83@example.com,paid,2026-08-21 13:06:00 -0700,fulfilled,USD,19.80,6.95,1.53,28.28,WELCOME10,2.20,2026-08-21 13:06:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1119,customer84@example.com,paid,2026-08-21 08:21:00 -0700,fulfilled,USD,80.00,0.00,6.20,86.20,,0.00,2026-08-21 08:21:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1119,customer84@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1120,customer85@example.com,paid,2026-08-21 15:20:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-21 15:20:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1121,customer86@example.com,refunded,2026-08-22 17:07:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-22 17:07:00 -0700,1,Canvas Tote,22.00,30.66,,web
+#1122,customer37@example.com,paid,2026-08-22 12:24:00 -0700,fulfilled,USD,42.00,6.95,3.26,52.21,,0.00,2026-08-22 12:24:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1122,customer37@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1123,customer87@example.com,paid,2026-08-22 10:22:00 -0700,fulfilled,USD,72.00,0.00,5.58,77.58,FREESHIP,6.95,2026-08-22 10:22:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1123,customer87@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1124,customer88@example.com,paid,2026-08-22 19:05:00 -0700,fulfilled,USD,120.00,0.00,9.30,129.30,FREESHIP,0.00,2026-08-22 19:05:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1124,customer88@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1125,customer89@example.com,paid,2026-08-22 12:32:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-22 12:32:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1126,customer90@example.com,paid,2026-08-22 13:03:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-22 13:03:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1127,customer91@example.com,paid,2026-08-22 14:03:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-22 14:03:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1128,,paid,2026-08-22 08:10:00 -0700,fulfilled,USD,30.00,0.00,2.33,32.33,,0.00,2026-08-22 08:10:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,pos
+#1129,customer43@example.com,paid,2026-08-22 17:58:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-22 17:58:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1130,customer70@example.com,paid,2026-08-22 09:40:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-08-22 09:40:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1131,customer92@example.com,paid,2026-08-22 16:37:00 -0700,fulfilled,USD,94.00,0.00,7.29,101.29,,0.00,2026-08-22 16:37:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1131,customer92@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1131,customer92@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1132,customer93@example.com,paid,2026-08-22 19:34:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-22 19:34:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1133,customer94@example.com,voided,,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-23 20:33:00 -0700,1,Embroidered Dad Hat,30.00,0.00,2026-08-23 20:33:00 -0700,web
+#1134,,paid,2026-08-23 20:50:00 -0700,fulfilled,USD,52.00,0.00,4.03,56.03,,0.00,2026-08-23 20:50:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,pos
+#1135,customer95@example.com,paid,2026-08-23 19:08:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-08-23 19:08:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1136,customer95@example.com,paid,2026-08-23 09:04:00 -0700,fulfilled,USD,38.00,6.95,2.95,47.90,,0.00,2026-08-23 09:04:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1136,customer95@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1137,customer96@example.com,paid,2026-08-23 14:44:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-23 14:44:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1138,customer97@example.com,paid,2026-08-23 11:56:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-23 11:56:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1139,customer98@example.com,paid,2026-08-23 15:45:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-23 15:45:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1140,customer99@example.com,paid,2026-08-23 14:35:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-08-23 14:35:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1140,customer99@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1141,customer100@example.com,paid,2026-08-23 21:36:00 -0700,fulfilled,USD,104.00,0.00,8.06,112.06,,0.00,2026-08-23 21:36:00 -0700,2,Crewneck Sweatshirt,52.00,0.00,,web
+#1142,customer101@example.com,paid,2026-08-23 14:17:00 -0700,fulfilled,USD,86.00,0.00,6.67,92.67,,0.00,2026-08-23 14:17:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1142,customer101@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1143,customer102@example.com,paid,2026-08-24 19:19:00 -0700,fulfilled,USD,50.40,6.95,3.91,61.26,WELCOME10,5.60,2026-08-24 19:19:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1144,customer103@example.com,paid,2026-08-24 15:42:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-24 15:42:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1145,customer104@example.com,paid,2026-08-24 12:27:00 -0700,fulfilled,USD,46.80,6.95,3.63,57.38,WELCOME10,5.20,2026-08-24 12:27:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1146,,paid,2026-08-24 08:55:00 -0700,fulfilled,USD,28.00,0.00,2.17,30.17,,0.00,2026-08-24 08:55:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1147,customer105@example.com,paid,2026-08-24 10:12:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-08-24 10:12:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1148,customer106@example.com,paid,2026-08-24 19:43:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-24 19:43:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1149,customer107@example.com,paid,2026-08-24 20:44:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-24 20:44:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1150,customer108@example.com,paid,2026-08-25 21:06:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-25 21:06:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1151,customer109@example.com,paid,2026-08-25 15:28:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-08-25 15:28:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1152,customer110@example.com,paid,2026-08-25 08:13:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-08-25 08:13:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1153,customer111@example.com,paid,2026-08-25 21:20:00 -0700,fulfilled,USD,80.00,0.00,6.20,86.20,,0.00,2026-08-25 21:20:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1153,customer111@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1154,customer106@example.com,paid,2026-08-25 17:02:00 -0700,fulfilled,USD,80.00,0.00,6.20,86.20,,0.00,2026-08-25 17:02:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1154,customer106@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1155,customer112@example.com,paid,2026-08-26 20:24:00 -0700,fulfilled,USD,25.20,6.95,1.95,34.10,WELCOME10,2.80,2026-08-26 20:24:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1156,customer113@example.com,paid,2026-08-26 16:45:00 -0700,fulfilled,USD,112.00,0.00,8.68,120.68,,0.00,2026-08-26 16:45:00 -0700,2,Crewneck Sweatshirt,52.00,0.00,,web
+#1156,customer113@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1157,customer114@example.com,paid,2026-08-26 10:02:00 -0700,fulfilled,USD,136.00,0.00,10.54,146.54,,0.00,2026-08-26 10:02:00 -0700,3,Classic Logo Tee,28.00,0.00,,web
+#1157,customer114@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1158,customer115@example.com,paid,2026-08-26 09:16:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-08-26 09:16:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1158,customer115@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1159,customer116@example.com,paid,2026-08-26 14:00:00 -0700,fulfilled,USD,220.00,0.00,17.05,237.05,FREESHIP,0.00,2026-08-26 14:00:00 -0700,3,Heavyweight Hoodie,64.00,0.00,,web
+#1159,customer116@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1160,customer117@example.com,paid,2026-08-26 14:52:00 -0700,fulfilled,USD,66.00,6.95,5.12,78.07,,0.00,2026-08-26 14:52:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1160,customer117@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1160,customer117@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1161,,paid,2026-08-27 18:53:00 -0700,fulfilled,USD,28.00,0.00,2.17,30.17,,0.00,2026-08-27 18:53:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1162,,paid,2026-08-27 16:02:00 -0700,fulfilled,USD,52.00,0.00,4.03,56.03,,0.00,2026-08-27 16:02:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,pos
+#1163,customer118@example.com,paid,2026-08-27 19:54:00 -0700,fulfilled,USD,56.00,0.00,4.34,60.34,FREESHIP,6.95,2026-08-27 19:54:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1164,,paid,2026-08-27 14:21:00 -0700,fulfilled,USD,30.00,0.00,2.33,32.33,,0.00,2026-08-27 14:21:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,pos
+#1165,customer119@example.com,paid,2026-08-27 16:09:00 -0700,fulfilled,USD,27.00,6.95,2.09,36.04,WELCOME10,3.00,2026-08-27 16:09:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1166,customer120@example.com,partially_refunded,2026-08-28 15:01:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-28 15:01:00 -0700,1,Embroidered Dad Hat,30.00,32.32,,web
+#1167,customer121@example.com,paid,2026-08-28 15:23:00 -0700,fulfilled,USD,42.00,6.95,3.26,52.21,,0.00,2026-08-28 15:23:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1167,customer121@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1168,customer89@example.com,paid,2026-08-28 21:01:00 -0700,fulfilled,USD,90.00,0.00,6.98,96.98,,0.00,2026-08-28 21:01:00 -0700,3,Embroidered Dad Hat,30.00,0.00,,web
+#1169,customer70@example.com,paid,2026-08-28 14:46:00 -0700,fulfilled,USD,66.00,6.95,5.12,78.07,,0.00,2026-08-28 14:46:00 -0700,3,Canvas Tote,22.00,0.00,,web
+#1170,customer122@example.com,paid,2026-08-28 15:19:00 -0700,fulfilled,USD,38.00,6.95,2.95,47.90,,0.00,2026-08-28 15:19:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1170,customer122@example.com,,,,,,,,,,,,2,Sticker Pack,8.00,,,
+#1171,customer123@example.com,paid,2026-08-28 11:27:00 -0700,fulfilled,USD,82.00,0.00,6.36,88.36,FREESHIP,0.00,2026-08-28 11:27:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1171,customer123@example.com,,,,,,,,,,,,2,Embroidered Dad Hat,30.00,,,
+#1172,,paid,2026-08-28 16:03:00 -0700,fulfilled,USD,8.00,0.00,0.62,8.62,,0.00,2026-08-28 16:03:00 -0700,1,Sticker Pack,8.00,0.00,,pos
+#1173,,paid,2026-08-28 17:53:00 -0700,fulfilled,USD,50.00,0.00,3.88,53.88,,0.00,2026-08-28 17:53:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1173,,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1174,customer124@example.com,paid,2026-08-28 20:20:00 -0700,fulfilled,USD,50.40,6.95,3.91,61.26,WELCOME10,5.60,2026-08-28 20:20:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1175,customer125@example.com,paid,2026-08-28 13:55:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-28 13:55:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1176,customer125@example.com,paid,2026-08-28 15:24:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-28 15:24:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1177,customer122@example.com,paid,2026-08-29 10:52:00 -0700,fulfilled,USD,104.00,0.00,8.06,112.06,,0.00,2026-08-29 10:52:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1177,customer122@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1177,customer122@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1178,customer119@example.com,paid,2026-08-29 18:25:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-08-29 18:25:00 -0700,3,Classic Logo Tee,28.00,0.00,,web
+#1178,customer119@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1179,customer126@example.com,paid,2026-08-29 14:19:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-29 14:19:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1180,customer127@example.com,paid,2026-08-29 17:21:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-29 17:21:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1181,customer128@example.com,paid,2026-08-29 14:26:00 -0700,fulfilled,USD,74.00,6.95,5.74,86.69,,0.00,2026-08-29 14:26:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1181,customer128@example.com,,,,,,,,,,,,2,Sticker Pack,8.00,,,
+#1181,customer128@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1182,customer129@example.com,paid,2026-08-29 19:02:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-08-29 19:02:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1183,,paid,2026-08-29 09:37:00 -0700,fulfilled,USD,28.00,0.00,2.17,30.17,,0.00,2026-08-29 09:37:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1184,customer130@example.com,paid,2026-08-29 20:15:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-08-29 20:15:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1184,customer130@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1185,customer131@example.com,paid,2026-08-29 20:01:00 -0700,fulfilled,USD,78.00,0.00,6.05,84.05,,0.00,2026-08-29 20:01:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1185,customer131@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1186,customer132@example.com,paid,2026-08-30 16:46:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-08-30 16:46:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1187,customer64@example.com,paid,2026-08-30 12:27:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-30 12:27:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1188,customer133@example.com,paid,2026-08-30 17:10:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-08-30 17:10:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1189,customer33@example.com,paid,2026-08-30 10:02:00 -0700,fulfilled,USD,72.00,6.95,5.58,84.53,,0.00,2026-08-30 10:02:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1189,customer33@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1190,customer99@example.com,paid,2026-08-30 16:22:00 -0700,fulfilled,USD,116.00,0.00,8.99,124.99,,0.00,2026-08-30 16:22:00 -0700,2,Canvas Tote,22.00,0.00,,web
+#1190,customer99@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1190,customer99@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1191,customer134@example.com,paid,2026-08-30 11:55:00 -0700,fulfilled,USD,81.00,0.00,6.28,87.28,WELCOME10,9.00,2026-08-30 11:55:00 -0700,3,Embroidered Dad Hat,30.00,0.00,,web
+#1192,customer135@example.com,paid,2026-08-30 09:29:00 -0700,fulfilled,USD,38.00,6.95,2.95,47.90,,0.00,2026-08-30 09:29:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1192,customer135@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1193,customer136@example.com,paid,2026-08-30 15:55:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-08-30 15:55:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1194,customer136@example.com,paid,2026-08-30 10:14:00 -0700,fulfilled,USD,146.00,0.00,11.32,157.32,,0.00,2026-08-30 10:14:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1194,customer136@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1194,customer136@example.com,,,,,,,,,,,,2,Embroidered Dad Hat,30.00,,,
+#1195,customer137@example.com,paid,2026-08-31 12:07:00 -0700,fulfilled,USD,44.00,0.00,3.41,47.41,FREESHIP,6.95,2026-08-31 12:07:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1195,customer137@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1196,customer138@example.com,paid,2026-08-31 18:09:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-08-31 18:09:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1197,customer139@example.com,paid,2026-08-31 20:21:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-08-31 20:21:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1198,customer123@example.com,paid,2026-08-31 15:46:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-08-31 15:46:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1199,customer29@example.com,paid,2026-08-31 08:07:00 -0700,fulfilled,USD,38.00,6.95,2.95,47.90,,0.00,2026-08-31 08:07:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1199,customer29@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1200,,paid,2026-08-31 16:30:00 -0700,fulfilled,USD,14.00,0.00,1.09,15.09,,0.00,2026-08-31 16:30:00 -0700,1,Enamel Pin Set,14.00,0.00,,pos
+#1201,customer140@example.com,paid,2026-08-31 12:14:00 -0700,fulfilled,USD,25.20,6.95,1.95,34.10,WELCOME10,2.80,2026-08-31 12:14:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1202,customer141@example.com,paid,2026-09-01 11:15:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-09-01 11:15:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1203,customer142@example.com,paid,2026-09-01 11:15:00 -0700,fulfilled,USD,88.00,0.00,6.82,94.82,,0.00,2026-09-01 11:15:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1203,customer142@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1203,customer142@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1204,customer53@example.com,paid,2026-09-01 21:41:00 -0700,fulfilled,USD,66.00,6.95,5.12,78.07,,0.00,2026-09-01 21:41:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1204,customer53@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1205,customer143@example.com,paid,2026-09-01 13:08:00 -0700,fulfilled,USD,46.00,6.95,3.57,56.52,,0.00,2026-09-01 13:08:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1205,customer143@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1206,customer144@example.com,partially_refunded,2026-09-01 16:59:00 -0700,fulfilled,USD,100.80,0.00,7.81,108.61,WELCOME10,11.20,2026-09-01 16:59:00 -0700,4,Classic Logo Tee,28.00,30.17,,web
+#1207,customer145@example.com,paid,2026-09-01 17:08:00 -0700,fulfilled,USD,36.00,6.95,2.79,45.74,,0.00,2026-09-01 17:08:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1207,customer145@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1208,customer146@example.com,paid,2026-09-02 12:34:00 -0700,fulfilled,USD,73.80,0.00,5.72,79.52,WELCOME10,8.20,2026-09-02 12:34:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1208,customer146@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1209,customer19@example.com,paid,2026-09-02 08:31:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-09-02 08:31:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1210,customer129@example.com,paid,2026-09-02 09:09:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-02 09:09:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1211,customer5@example.com,paid,2026-09-02 16:18:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-02 16:18:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1212,customer147@example.com,paid,2026-09-02 15:51:00 -0700,fulfilled,USD,57.60,6.95,4.46,69.01,WELCOME10,6.40,2026-09-02 15:51:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1213,customer148@example.com,refunded,2026-09-02 12:16:00 -0700,fulfilled,USD,104.00,0.00,8.06,112.06,,0.00,2026-09-02 12:16:00 -0700,2,Crewneck Sweatshirt,52.00,112.06,,web
+#1214,customer4@example.com,paid,2026-09-03 16:13:00 -0700,fulfilled,USD,116.00,0.00,8.99,124.99,,0.00,2026-09-03 16:13:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1214,customer4@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1215,,paid,2026-09-03 17:08:00 -0700,fulfilled,USD,56.00,0.00,4.34,60.34,,0.00,2026-09-03 17:08:00 -0700,2,Classic Logo Tee,28.00,0.00,,pos
+#1216,customer149@example.com,paid,2026-09-03 09:09:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-03 09:09:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1216,customer149@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1216,customer149@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1217,customer150@example.com,paid,2026-09-03 21:56:00 -0700,fulfilled,USD,57.60,6.95,4.46,69.01,WELCOME10,6.40,2026-09-03 21:56:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1217,customer150@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1218,customer131@example.com,paid,2026-09-03 16:16:00 -0700,fulfilled,USD,44.00,0.00,3.41,47.41,FREESHIP,6.95,2026-09-03 16:16:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1218,customer131@example.com,,,,,,,,,,,,2,Sticker Pack,8.00,,,
+#1219,customer151@example.com,paid,2026-09-03 21:49:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-09-03 21:49:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1219,customer151@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1220,customer152@example.com,paid,2026-09-03 12:27:00 -0700,fulfilled,USD,44.00,6.95,3.41,54.36,,0.00,2026-09-03 12:27:00 -0700,2,Canvas Tote,22.00,0.00,,web
+#1221,customer153@example.com,paid,2026-09-03 10:40:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-03 10:40:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1221,customer153@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1222,customer154@example.com,paid,2026-09-03 13:52:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-09-03 13:52:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1223,customer155@example.com,paid,2026-09-04 18:39:00 -0700,fulfilled,USD,84.00,0.00,6.51,90.51,,0.00,2026-09-04 18:39:00 -0700,3,Classic Logo Tee,28.00,0.00,,web
+#1224,customer156@example.com,paid,2026-09-04 11:36:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-04 11:36:00 -0700,2,Enamel Pin Set,14.00,0.00,,web
+#1224,customer156@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1225,customer157@example.com,paid,2026-09-04 15:07:00 -0700,fulfilled,USD,94.00,0.00,7.29,101.29,,0.00,2026-09-04 15:07:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1225,customer157@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1226,customer158@example.com,paid,2026-09-04 14:53:00 -0700,fulfilled,USD,36.00,6.95,2.79,45.74,,0.00,2026-09-04 14:53:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1226,customer158@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1227,customer133@example.com,paid,2026-09-04 14:15:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-04 14:15:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1228,customer159@example.com,paid,2026-09-04 15:08:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-04 15:08:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1228,customer159@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1229,customer160@example.com,paid,2026-09-04 09:16:00 -0700,fulfilled,USD,27.00,6.95,2.09,36.04,WELCOME10,3.00,2026-09-04 09:16:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1230,,paid,2026-09-04 13:02:00 -0700,fulfilled,USD,46.00,0.00,3.57,49.57,,0.00,2026-09-04 13:02:00 -0700,1,Canvas Tote,22.00,0.00,,pos
+#1230,,,,,,,,,,,,,3,Sticker Pack,8.00,,,
+#1231,customer161@example.com,paid,2026-09-04 14:25:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-04 14:25:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1232,customer69@example.com,paid,2026-09-04 20:55:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-04 20:55:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1233,customer162@example.com,paid,2026-09-04 15:53:00 -0700,fulfilled,USD,172.00,0.00,13.33,185.33,,0.00,2026-09-04 15:53:00 -0700,2,Heavyweight Hoodie,64.00,0.00,,web
+#1233,customer162@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1233,customer162@example.com,,,,,,,,,,,,2,Sticker Pack,8.00,,,
+#1234,customer163@example.com,paid,2026-09-04 10:15:00 -0700,fulfilled,USD,19.80,6.95,1.53,28.28,WELCOME10,2.20,2026-09-04 10:15:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1235,customer85@example.com,paid,2026-09-05 18:21:00 -0700,fulfilled,USD,116.00,0.00,8.99,124.99,,0.00,2026-09-05 18:21:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1235,customer85@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1236,,paid,2026-09-05 12:48:00 -0700,fulfilled,USD,30.00,0.00,2.33,32.33,,0.00,2026-09-05 12:48:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,pos
+#1237,customer164@example.com,paid,2026-09-05 08:27:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-05 08:27:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1238,customer69@example.com,paid,2026-09-05 10:31:00 -0700,fulfilled,USD,44.00,6.95,3.41,54.36,,0.00,2026-09-05 10:31:00 -0700,2,Canvas Tote,22.00,0.00,,web
+#1239,customer165@example.com,paid,2026-09-05 09:49:00 -0700,fulfilled,USD,42.00,6.95,3.26,52.21,,0.00,2026-09-05 09:49:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1239,customer165@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1240,customer166@example.com,paid,2026-09-05 08:21:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-05 08:21:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1241,customer167@example.com,paid,2026-09-05 19:48:00 -0700,fulfilled,USD,7.20,6.95,0.56,14.71,WELCOME10,0.80,2026-09-05 19:48:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1242,customer168@example.com,paid,2026-09-05 17:36:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-05 17:36:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1243,customer115@example.com,paid,2026-09-05 18:05:00 -0700,fulfilled,USD,52.00,0.00,4.03,56.03,FREESHIP,6.95,2026-09-05 18:05:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1244,customer169@example.com,paid,2026-09-05 18:26:00 -0700,fulfilled,USD,57.60,6.95,4.46,69.01,WELCOME10,6.40,2026-09-05 18:26:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1245,customer170@example.com,paid,2026-09-05 15:12:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-05 15:12:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1246,customer85@example.com,paid,2026-09-06 16:07:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-06 16:07:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1247,customer171@example.com,paid,2026-09-06 21:39:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-06 21:39:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1248,customer172@example.com,paid,2026-09-06 12:16:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-06 12:16:00 -0700,2,Enamel Pin Set,14.00,0.00,,web
+#1249,customer173@example.com,paid,2026-09-06 13:06:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-06 13:06:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1250,customer174@example.com,paid,2026-09-06 21:09:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-09-06 21:09:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1251,customer175@example.com,paid,2026-09-06 11:27:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-06 11:27:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1252,customer176@example.com,paid,2026-09-06 10:19:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-09-06 10:19:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1252,customer176@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1253,customer1@example.com,paid,2026-09-06 20:13:00 -0700,fulfilled,USD,36.00,6.95,2.79,45.74,,0.00,2026-09-06 20:13:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1253,customer1@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1254,customer177@example.com,paid,2026-09-06 20:33:00 -0700,fulfilled,USD,12.60,6.95,0.98,20.53,WELCOME10,1.40,2026-09-06 20:33:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1255,,paid,2026-09-07 08:25:00 -0700,fulfilled,USD,22.00,0.00,1.71,23.71,,0.00,2026-09-07 08:25:00 -0700,1,Canvas Tote,22.00,0.00,,pos
+#1256,customer178@example.com,paid,2026-09-07 09:13:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-07 09:13:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1257,customer179@example.com,paid,2026-09-07 21:46:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-07 21:46:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1258,customer180@example.com,paid,2026-09-07 13:32:00 -0700,fulfilled,USD,128.00,0.00,9.92,137.92,,0.00,2026-09-07 13:32:00 -0700,2,Heavyweight Hoodie,64.00,0.00,,web
+#1259,customer38@example.com,paid,2026-09-07 19:27:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-09-07 19:27:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1259,customer38@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1260,customer181@example.com,refunded,2026-09-07 19:18:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-07 19:18:00 -0700,1,Classic Logo Tee,28.00,37.12,,web
+#1261,customer182@example.com,paid,2026-09-07 16:36:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-09-07 16:36:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1262,customer183@example.com,paid,2026-09-07 13:01:00 -0700,fulfilled,USD,82.00,0.00,6.36,88.36,,0.00,2026-09-07 13:01:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1262,customer183@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1262,customer183@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1263,,paid,2026-09-08 14:55:00 -0700,fulfilled,USD,28.00,0.00,2.17,30.17,,0.00,2026-09-08 14:55:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1264,customer184@example.com,paid,2026-09-08 20:13:00 -0700,fulfilled,USD,27.00,6.95,2.09,36.04,WELCOME10,3.00,2026-09-08 20:13:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1265,customer185@example.com,paid,2026-09-08 17:27:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-08 17:27:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1266,customer19@example.com,paid,2026-09-08 20:53:00 -0700,fulfilled,USD,44.00,6.95,3.41,54.36,,0.00,2026-09-08 20:53:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1266,customer19@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1267,customer135@example.com,paid,2026-09-08 09:04:00 -0700,fulfilled,USD,36.00,6.95,2.79,45.74,,0.00,2026-09-08 09:04:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1267,customer135@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1268,customer186@example.com,paid,2026-09-08 14:27:00 -0700,fulfilled,USD,58.00,6.95,4.50,69.45,,0.00,2026-09-08 14:27:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1268,customer186@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1269,customer187@example.com,paid,2026-09-08 13:46:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-08 13:46:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1270,customer188@example.com,paid,2026-09-08 19:13:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-08 19:13:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1271,customer189@example.com,paid,2026-09-08 11:59:00 -0700,fulfilled,USD,46.00,6.95,3.57,56.52,,0.00,2026-09-08 11:59:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1271,customer189@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1272,customer190@example.com,paid,2026-09-09 08:40:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-09 08:40:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1273,customer104@example.com,paid,2026-09-09 08:09:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-09 08:09:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1274,customer191@example.com,paid,2026-09-09 12:09:00 -0700,fulfilled,USD,184.00,0.00,14.26,198.26,,0.00,2026-09-09 12:09:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1274,customer191@example.com,,,,,,,,,,,,2,Heavyweight Hoodie,64.00,,,
+#1275,customer192@example.com,partially_refunded,2026-09-09 19:12:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-09 19:12:00 -0700,1,Classic Logo Tee,28.00,30.17,,web
+#1276,customer27@example.com,paid,2026-09-09 21:06:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-09-09 21:06:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1277,customer46@example.com,refunded,2026-09-09 10:46:00 -0700,fulfilled,USD,70.00,6.95,5.43,82.38,,0.00,2026-09-09 10:46:00 -0700,1,Enamel Pin Set,14.00,82.38,,web
+#1277,customer46@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1278,customer8@example.com,paid,2026-09-09 17:51:00 -0700,fulfilled,USD,112.00,0.00,8.68,120.68,,0.00,2026-09-09 17:51:00 -0700,4,Classic Logo Tee,28.00,0.00,,web
+#1279,customer193@example.com,paid,2026-09-09 15:49:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-09 15:49:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1280,,paid,2026-09-10 21:22:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-09-10 21:22:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1280,,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1281,customer194@example.com,paid,2026-09-10 09:41:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-10 09:41:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1282,customer195@example.com,paid,2026-09-10 10:38:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-10 10:38:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1283,customer196@example.com,paid,2026-09-10 19:59:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-09-10 19:59:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1284,customer126@example.com,paid,2026-09-10 16:43:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-10 16:43:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1285,customer197@example.com,paid,2026-09-10 16:59:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-10 16:59:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1286,,paid,2026-09-11 10:36:00 -0700,fulfilled,USD,84.00,0.00,6.51,90.51,,0.00,2026-09-11 10:36:00 -0700,3,Classic Logo Tee,28.00,0.00,,pos
+#1287,customer101@example.com,paid,2026-09-11 17:33:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-11 17:33:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1288,customer198@example.com,paid,2026-09-11 18:25:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-11 18:25:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1289,customer196@example.com,paid,2026-09-11 08:44:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-11 08:44:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1290,customer199@example.com,paid,2026-09-11 09:01:00 -0700,fulfilled,USD,78.00,0.00,6.05,84.05,,0.00,2026-09-11 09:01:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1290,customer199@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1291,customer196@example.com,paid,2026-09-11 19:17:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-11 19:17:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1292,,paid,2026-09-11 12:39:00 -0700,fulfilled,USD,74.00,0.00,5.74,79.74,,0.00,2026-09-11 12:39:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,pos
+#1292,,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1293,customer200@example.com,paid,2026-09-11 11:49:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-11 11:49:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1294,customer201@example.com,paid,2026-09-11 10:06:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-11 10:06:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1295,customer98@example.com,paid,2026-09-11 08:55:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-11 08:55:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1296,customer137@example.com,paid,2026-09-12 16:28:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-12 16:28:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1297,customer202@example.com,paid,2026-09-12 19:07:00 -0700,fulfilled,USD,80.00,0.00,6.20,86.20,,0.00,2026-09-12 19:07:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1297,customer202@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1298,customer203@example.com,paid,2026-09-12 11:53:00 -0700,fulfilled,USD,90.00,0.00,6.98,96.98,,0.00,2026-09-12 11:53:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1298,customer203@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1298,customer203@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1299,customer204@example.com,paid,2026-09-12 09:54:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-12 09:54:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1300,customer205@example.com,paid,2026-09-12 11:27:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-12 11:27:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1301,,paid,2026-09-12 08:13:00 -0700,fulfilled,USD,36.00,0.00,2.79,38.79,,0.00,2026-09-12 08:13:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1301,,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1302,customer206@example.com,paid,2026-09-12 17:08:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-12 17:08:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1303,customer207@example.com,paid,2026-09-12 09:31:00 -0700,fulfilled,USD,34.20,6.95,2.65,43.80,WELCOME10,3.80,2026-09-12 09:31:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1303,customer207@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1304,customer208@example.com,paid,2026-09-12 20:12:00 -0700,fulfilled,USD,22.00,0.00,1.71,23.71,FREESHIP,6.95,2026-09-12 20:12:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1305,customer209@example.com,paid,2026-09-12 10:24:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-12 10:24:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1306,,paid,2026-09-12 19:35:00 -0700,fulfilled,USD,28.00,0.00,2.17,30.17,,0.00,2026-09-12 19:35:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1307,customer177@example.com,paid,2026-09-13 11:42:00 -0700,fulfilled,USD,8.00,0.00,0.62,8.62,FREESHIP,6.95,2026-09-13 11:42:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1308,customer210@example.com,paid,2026-09-13 14:25:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-09-13 14:25:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1309,,paid,2026-09-13 16:29:00 -0700,fulfilled,USD,64.00,0.00,4.96,68.96,,0.00,2026-09-13 16:29:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,pos
+#1310,customer211@example.com,partially_refunded,2026-09-13 10:18:00 -0700,fulfilled,USD,64.00,0.00,4.96,68.96,FREESHIP,6.95,2026-09-13 10:18:00 -0700,1,Heavyweight Hoodie,64.00,68.96,,web
+#1311,customer212@example.com,paid,2026-09-13 09:07:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-13 09:07:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1312,,paid,2026-09-13 16:37:00 -0700,fulfilled,USD,8.00,0.00,0.62,8.62,,0.00,2026-09-13 16:37:00 -0700,1,Sticker Pack,8.00,0.00,,pos
+#1313,,paid,2026-09-13 20:55:00 -0700,fulfilled,USD,14.00,0.00,1.09,15.09,,0.00,2026-09-13 20:55:00 -0700,1,Enamel Pin Set,14.00,0.00,,pos
+#1314,customer127@example.com,paid,2026-09-13 14:00:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-09-13 14:00:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1315,customer213@example.com,paid,2026-09-13 17:02:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-09-13 17:02:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1316,,paid,2026-09-13 20:40:00 -0700,fulfilled,USD,28.00,0.00,2.17,30.17,,0.00,2026-09-13 20:40:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1317,customer214@example.com,paid,2026-09-13 17:00:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-13 17:00:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1318,customer101@example.com,paid,2026-09-14 21:07:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-14 21:07:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1319,customer130@example.com,paid,2026-09-14 18:19:00 -0700,fulfilled,USD,44.00,6.95,3.41,54.36,,0.00,2026-09-14 18:19:00 -0700,2,Canvas Tote,22.00,0.00,,web
+#1320,,refunded,2026-09-14 20:21:00 -0700,fulfilled,USD,64.00,0.00,4.96,68.96,,0.00,2026-09-14 20:21:00 -0700,1,Heavyweight Hoodie,64.00,68.96,,pos
+#1321,customer124@example.com,paid,2026-09-14 10:11:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-14 10:11:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1322,,refunded,2026-09-14 12:04:00 -0700,fulfilled,USD,28.00,0.00,2.17,30.17,,0.00,2026-09-14 12:04:00 -0700,1,Classic Logo Tee,28.00,30.17,,pos
+#1323,customer178@example.com,paid,2026-09-14 17:29:00 -0700,fulfilled,USD,90.00,0.00,6.98,96.98,,0.00,2026-09-14 17:29:00 -0700,3,Embroidered Dad Hat,30.00,0.00,,web
+#1324,customer215@example.com,paid,2026-09-14 10:49:00 -0700,fulfilled,USD,39.60,6.95,3.07,49.62,WELCOME10,4.40,2026-09-14 10:49:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1324,customer215@example.com,,,,,,,,,,,,2,Sticker Pack,8.00,,,
+#1325,customer216@example.com,paid,2026-09-14 15:03:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-09-14 15:03:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1326,customer217@example.com,paid,2026-09-14 11:54:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-09-14 11:54:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1327,customer45@example.com,paid,2026-09-15 19:30:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-15 19:30:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1328,customer218@example.com,paid,2026-09-15 12:44:00 -0700,fulfilled,USD,172.00,0.00,13.33,185.33,,0.00,2026-09-15 12:44:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1328,customer218@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1328,customer218@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1329,customer65@example.com,paid,2026-09-15 11:52:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-15 11:52:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1330,customer140@example.com,paid,2026-09-15 14:41:00 -0700,fulfilled,USD,80.00,0.00,6.20,86.20,,0.00,2026-09-15 14:41:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1330,customer140@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1331,customer109@example.com,paid,2026-09-15 08:07:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-09-15 08:07:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1331,customer109@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1331,customer109@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1332,customer219@example.com,paid,2026-09-15 14:47:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-15 14:47:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1333,customer64@example.com,paid,2026-09-15 16:50:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-15 16:50:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1334,customer146@example.com,paid,2026-09-15 18:28:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-15 18:28:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1335,customer220@example.com,paid,2026-09-16 13:17:00 -0700,fulfilled,USD,58.00,6.95,4.50,69.45,,0.00,2026-09-16 13:17:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1335,customer220@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1336,customer221@example.com,paid,2026-09-16 13:27:00 -0700,fulfilled,USD,72.00,6.95,5.58,84.53,,0.00,2026-09-16 13:27:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1336,customer221@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1336,customer221@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1337,customer34@example.com,paid,2026-09-16 18:05:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-16 18:05:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1338,,paid,2026-09-16 12:56:00 -0700,fulfilled,USD,36.00,0.00,2.79,38.79,,0.00,2026-09-16 12:56:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1338,,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1339,customer222@example.com,paid,2026-09-16 11:24:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-09-16 11:24:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1340,customer7@example.com,paid,2026-09-16 15:03:00 -0700,fulfilled,USD,58.00,6.95,4.50,69.45,,0.00,2026-09-16 15:03:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1340,customer7@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1341,customer223@example.com,paid,2026-09-16 17:52:00 -0700,fulfilled,USD,57.60,6.95,4.46,69.01,WELCOME10,6.40,2026-09-16 17:52:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1342,customer45@example.com,paid,2026-09-16 13:21:00 -0700,fulfilled,USD,120.00,0.00,9.30,129.30,,0.00,2026-09-16 13:21:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1342,customer45@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1343,customer224@example.com,paid,2026-09-16 13:52:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-16 13:52:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1343,customer224@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1344,customer95@example.com,paid,2026-09-17 12:52:00 -0700,fulfilled,USD,72.00,6.95,5.58,84.53,,0.00,2026-09-17 12:52:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1344,customer95@example.com,,,,,,,,,,,,2,Canvas Tote,22.00,,,
+#1345,customer225@example.com,paid,2026-09-17 10:40:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-09-17 10:40:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1345,customer225@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1346,customer226@example.com,paid,2026-09-17 14:14:00 -0700,fulfilled,USD,52.00,0.00,4.03,56.03,FREESHIP,6.95,2026-09-17 14:14:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1347,customer227@example.com,paid,2026-09-17 17:27:00 -0700,fulfilled,USD,36.00,6.95,2.79,45.74,,0.00,2026-09-17 17:27:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1347,customer227@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1348,customer113@example.com,paid,2026-09-17 11:27:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-17 11:27:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1349,,paid,2026-09-17 18:51:00 -0700,fulfilled,USD,72.00,0.00,5.58,77.58,,0.00,2026-09-17 18:51:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1349,,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1349,,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1350,customer228@example.com,paid,2026-09-17 12:39:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-09-17 12:39:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1351,,paid,2026-09-18 12:15:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-09-18 12:15:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,pos
+#1351,,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1352,customer229@example.com,paid,2026-09-18 11:03:00 -0700,fulfilled,USD,75.60,0.00,5.86,81.46,WELCOME10,8.40,2026-09-18 11:03:00 -0700,3,Classic Logo Tee,28.00,0.00,,web
+#1353,customer230@example.com,paid,2026-09-18 08:02:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-09-18 08:02:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1353,customer230@example.com,,,,,,,,,,,,2,Enamel Pin Set,14.00,,,
+#1354,customer231@example.com,paid,2026-09-18 10:01:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-18 10:01:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1355,customer232@example.com,paid,2026-09-18 13:29:00 -0700,fulfilled,USD,25.20,6.95,1.95,34.10,WELCOME10,2.80,2026-09-18 13:29:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1356,customer41@example.com,paid,2026-09-18 19:46:00 -0700,fulfilled,USD,94.00,0.00,7.29,101.29,,0.00,2026-09-18 19:46:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1356,customer41@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1357,customer233@example.com,paid,2026-09-18 19:50:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-18 19:50:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1358,customer192@example.com,paid,2026-09-18 15:10:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-18 15:10:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1359,customer234@example.com,paid,2026-09-18 14:35:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-18 14:35:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1360,customer235@example.com,paid,2026-09-19 21:37:00 -0700,fulfilled,USD,57.60,6.95,4.46,69.01,WELCOME10,6.40,2026-09-19 21:37:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1360,customer235@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1361,customer236@example.com,paid,2026-09-19 20:38:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-19 20:38:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1362,customer237@example.com,paid,2026-09-19 15:48:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-19 15:48:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1363,customer238@example.com,paid,2026-09-19 11:10:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-19 11:10:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1364,customer239@example.com,paid,2026-09-19 14:42:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-19 14:42:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1365,customer24@example.com,partially_refunded,2026-09-19 11:35:00 -0700,fulfilled,USD,94.00,0.00,7.29,101.29,,0.00,2026-09-19 11:35:00 -0700,1,Embroidered Dad Hat,30.00,32.32,,web
+#1365,customer24@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1366,customer240@example.com,paid,2026-09-19 10:12:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-09-19 10:12:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1367,customer3@example.com,paid,2026-09-19 09:56:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-19 09:56:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1368,customer241@example.com,paid,2026-09-19 14:26:00 -0700,fulfilled,USD,168.00,0.00,13.02,181.02,,0.00,2026-09-19 14:26:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1368,customer241@example.com,,,,,,,,,,,,2,Embroidered Dad Hat,30.00,,,
+#1368,customer241@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1369,customer147@example.com,paid,2026-09-19 21:21:00 -0700,fulfilled,USD,58.00,6.95,4.50,69.45,,0.00,2026-09-19 21:21:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1369,customer147@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1369,customer147@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1370,customer242@example.com,paid,2026-09-19 19:41:00 -0700,fulfilled,USD,94.00,0.00,7.29,101.29,,0.00,2026-09-19 19:41:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1370,customer242@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1371,customer239@example.com,paid,2026-09-19 17:06:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-19 17:06:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1372,customer243@example.com,paid,2026-09-19 17:41:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-09-19 17:41:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1373,customer191@example.com,paid,2026-09-20 21:30:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-20 21:30:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1374,customer244@example.com,paid,2026-09-20 19:55:00 -0700,fulfilled,USD,44.00,0.00,3.41,47.41,FREESHIP,6.95,2026-09-20 19:55:00 -0700,2,Canvas Tote,22.00,0.00,,web
+#1375,customer245@example.com,paid,2026-09-20 15:00:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-20 15:00:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1376,customer246@example.com,paid,2026-09-20 19:24:00 -0700,fulfilled,USD,84.00,0.00,6.51,90.51,,0.00,2026-09-20 19:24:00 -0700,3,Classic Logo Tee,28.00,0.00,,web
+#1377,customer247@example.com,paid,2026-09-20 17:12:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-09-20 17:12:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1377,customer247@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1378,,paid,2026-09-20 09:34:00 -0700,fulfilled,USD,30.00,0.00,2.33,32.33,,0.00,2026-09-20 09:34:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,pos
+#1379,customer41@example.com,paid,2026-09-20 12:38:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-20 12:38:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1380,,paid,2026-09-20 09:04:00 -0700,fulfilled,USD,128.00,0.00,9.92,137.92,,0.00,2026-09-20 09:04:00 -0700,2,Heavyweight Hoodie,64.00,0.00,,pos
+#1381,customer248@example.com,paid,2026-09-20 13:55:00 -0700,fulfilled,USD,86.00,0.00,6.67,92.67,,0.00,2026-09-20 13:55:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1381,customer248@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1382,customer249@example.com,paid,2026-09-20 13:34:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-20 13:34:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1383,customer84@example.com,paid,2026-09-20 20:35:00 -0700,fulfilled,USD,58.00,6.95,4.50,69.45,,0.00,2026-09-20 20:35:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1383,customer84@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1384,,paid,2026-09-21 10:52:00 -0700,fulfilled,USD,64.00,0.00,4.96,68.96,,0.00,2026-09-21 10:52:00 -0700,2,Classic Logo Tee,28.00,0.00,,pos
+#1384,,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1385,customer250@example.com,paid,2026-09-21 09:21:00 -0700,fulfilled,USD,36.00,6.95,2.79,45.74,,0.00,2026-09-21 09:21:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1385,customer250@example.com,,,,,,,,,,,,2,Enamel Pin Set,14.00,,,
+#1386,customer53@example.com,paid,2026-09-21 14:26:00 -0700,fulfilled,USD,72.00,6.95,5.58,84.53,,0.00,2026-09-21 14:26:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1386,customer53@example.com,,,,,,,,,,,,2,Canvas Tote,22.00,,,
+#1387,customer98@example.com,paid,2026-09-21 10:50:00 -0700,fulfilled,USD,64.00,0.00,4.96,68.96,FREESHIP,6.95,2026-09-21 10:50:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1388,customer251@example.com,paid,2026-09-21 09:06:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-21 09:06:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1389,customer252@example.com,paid,2026-09-21 12:09:00 -0700,fulfilled,USD,42.50,6.95,3.29,52.74,FALL15,7.50,2026-09-21 12:09:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1389,customer252@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1390,customer253@example.com,paid,2026-09-21 10:58:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-09-21 10:58:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1391,customer254@example.com,paid,2026-09-21 21:04:00 -0700,fulfilled,USD,102.00,0.00,7.91,109.91,,0.00,2026-09-21 21:04:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1391,customer254@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1391,customer254@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1392,customer255@example.com,paid,2026-09-22 12:44:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-22 12:44:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1393,customer256@example.com,paid,2026-09-22 10:32:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-09-22 10:32:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1394,customer121@example.com,paid,2026-09-22 12:32:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-22 12:32:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1394,customer121@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1395,customer257@example.com,paid,2026-09-22 17:31:00 -0700,fulfilled,USD,128.00,0.00,9.92,137.92,,0.00,2026-09-22 17:31:00 -0700,2,Heavyweight Hoodie,64.00,0.00,,web
+#1396,,paid,2026-09-22 21:34:00 -0700,fulfilled,USD,52.00,0.00,4.03,56.03,,0.00,2026-09-22 21:34:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,pos
+#1397,customer258@example.com,paid,2026-09-22 15:43:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-09-22 15:43:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1398,customer259@example.com,paid,2026-09-22 21:50:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-09-22 21:50:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1398,customer259@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1399,customer260@example.com,paid,2026-09-23 12:16:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-23 12:16:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1400,,paid,2026-09-23 13:11:00 -0700,fulfilled,USD,30.00,0.00,2.33,32.33,,0.00,2026-09-23 13:11:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,pos
+#1401,customer261@example.com,refunded,2026-09-23 14:17:00 -0700,fulfilled,USD,6.80,6.95,0.53,14.28,FALL15,1.20,2026-09-23 14:17:00 -0700,1,Sticker Pack,8.00,14.28,,web
+#1402,,paid,2026-09-23 19:32:00 -0700,fulfilled,USD,44.00,0.00,3.41,47.41,,0.00,2026-09-23 19:32:00 -0700,2,Sticker Pack,8.00,0.00,,pos
+#1402,,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1403,customer262@example.com,paid,2026-09-23 15:49:00 -0700,fulfilled,USD,70.20,0.00,5.44,75.64,WELCOME10,7.80,2026-09-23 15:49:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1403,customer262@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1404,customer263@example.com,paid,2026-09-23 21:47:00 -0700,fulfilled,USD,104.40,0.00,8.09,112.49,WELCOME10,11.60,2026-09-23 21:47:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1404,customer263@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1405,customer264@example.com,paid,2026-09-23 13:22:00 -0700,fulfilled,USD,160.00,0.00,12.40,172.40,,0.00,2026-09-23 13:22:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1405,customer264@example.com,,,,,,,,,,,,2,Crewneck Sweatshirt,52.00,,,
+#1406,customer265@example.com,paid,2026-09-24 14:01:00 -0700,fulfilled,USD,11.90,6.95,0.92,19.77,FALL15,2.10,2026-09-24 14:01:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1407,customer266@example.com,paid,2026-09-24 20:12:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-24 20:12:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1408,customer267@example.com,paid,2026-09-24 09:48:00 -0700,fulfilled,USD,25.20,6.95,1.95,34.10,WELCOME10,2.80,2026-09-24 09:48:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1409,customer268@example.com,paid,2026-09-24 09:03:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-24 09:03:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1410,customer269@example.com,paid,2026-09-24 17:02:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-09-24 17:02:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1411,customer85@example.com,paid,2026-09-24 21:34:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-24 21:34:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1412,customer270@example.com,paid,2026-09-24 10:34:00 -0700,fulfilled,USD,23.80,6.95,1.84,32.59,FALL15,4.20,2026-09-24 10:34:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1413,customer271@example.com,paid,2026-09-24 19:58:00 -0700,fulfilled,USD,78.20,0.00,6.06,84.26,FALL15,13.80,2026-09-24 19:58:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1413,customer271@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1414,customer272@example.com,paid,2026-09-25 19:07:00 -0700,fulfilled,USD,74.80,0.00,5.80,80.60,FALL15,13.20,2026-09-25 19:07:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1414,customer272@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1414,customer272@example.com,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1415,customer273@example.com,paid,2026-09-25 14:15:00 -0700,fulfilled,USD,18.70,6.95,1.45,27.10,FALL15,3.30,2026-09-25 14:15:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1416,customer274@example.com,paid,2026-09-25 08:35:00 -0700,fulfilled,USD,115.20,0.00,8.93,124.13,WELCOME10,12.80,2026-09-25 08:35:00 -0700,2,Heavyweight Hoodie,64.00,0.00,,web
+#1417,customer275@example.com,paid,2026-09-25 09:02:00 -0700,fulfilled,USD,32.30,6.95,2.50,41.75,FALL15,5.70,2026-09-25 09:02:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1417,customer275@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1418,customer276@example.com,paid,2026-09-25 12:25:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-09-25 12:25:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1419,customer277@example.com,paid,2026-09-25 11:44:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-09-25 11:44:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1419,customer277@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1419,customer277@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1420,customer278@example.com,paid,2026-09-25 11:13:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-09-25 11:13:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1421,customer279@example.com,paid,2026-09-25 18:45:00 -0700,fulfilled,USD,44.20,6.95,3.43,54.58,FALL15,7.80,2026-09-25 18:45:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1422,customer63@example.com,paid,2026-09-25 14:10:00 -0700,fulfilled,USD,60.00,6.95,4.65,71.60,,0.00,2026-09-25 14:10:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1422,customer63@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1422,customer63@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1423,customer280@example.com,paid,2026-09-25 16:04:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-25 16:04:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1424,customer281@example.com,paid,2026-09-26 14:33:00 -0700,fulfilled,USD,54.40,6.95,4.22,65.57,FALL15,9.60,2026-09-26 14:33:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1425,customer227@example.com,paid,2026-09-26 14:19:00 -0700,fulfilled,USD,23.80,6.95,1.84,32.59,FALL15,4.20,2026-09-26 14:19:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1426,customer282@example.com,paid,2026-09-26 08:57:00 -0700,fulfilled,USD,84.00,0.00,6.51,90.51,,0.00,2026-09-26 08:57:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1426,customer282@example.com,,,,,,,,,,,,3,Sticker Pack,8.00,,,
+#1427,customer283@example.com,paid,2026-09-26 19:11:00 -0700,fulfilled,USD,44.20,6.95,3.43,54.58,FALL15,7.80,2026-09-26 19:11:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1428,customer284@example.com,refunded,2026-09-26 17:38:00 -0700,fulfilled,USD,79.20,0.00,6.14,85.34,WELCOME10,8.80,2026-09-26 17:38:00 -0700,1,Classic Logo Tee,28.00,85.34,,web
+#1428,customer284@example.com,,,,,,,,,,,,2,Embroidered Dad Hat,30.00,,,
+#1429,customer68@example.com,paid,2026-09-26 20:20:00 -0700,fulfilled,USD,6.80,6.95,0.53,14.28,FALL15,1.20,2026-09-26 20:20:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1430,customer285@example.com,paid,2026-09-26 20:30:00 -0700,fulfilled,USD,6.80,6.95,0.53,14.28,FALL15,1.20,2026-09-26 20:30:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1431,customer286@example.com,paid,2026-09-26 15:34:00 -0700,fulfilled,USD,13.60,6.95,1.05,21.60,FALL15,2.40,2026-09-26 15:34:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1432,customer287@example.com,paid,2026-09-26 14:47:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-26 14:47:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1433,customer288@example.com,paid,2026-09-26 14:13:00 -0700,fulfilled,USD,32.30,6.95,2.50,41.75,FALL15,5.70,2026-09-26 14:13:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1433,customer288@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1434,customer167@example.com,paid,2026-09-26 12:24:00 -0700,fulfilled,USD,114.00,0.00,8.83,122.83,,0.00,2026-09-26 12:24:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1434,customer167@example.com,,,,,,,,,,,,3,Classic Logo Tee,28.00,,,
+#1435,customer289@example.com,paid,2026-09-26 10:52:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-26 10:52:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1436,customer154@example.com,paid,2026-09-26 19:51:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-09-26 19:51:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1437,customer290@example.com,paid,2026-09-26 20:39:00 -0700,fulfilled,USD,79.90,0.00,6.19,86.09,FALL15,14.10,2026-09-26 20:39:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1437,customer290@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1438,customer58@example.com,paid,2026-09-26 11:50:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-09-26 11:50:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1439,,paid,2026-09-26 15:54:00 -0700,fulfilled,USD,50.00,0.00,3.88,53.88,,0.00,2026-09-26 15:54:00 -0700,1,Classic Logo Tee,28.00,0.00,,pos
+#1439,,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1440,customer291@example.com,paid,2026-09-27 12:24:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-09-27 12:24:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1441,customer225@example.com,paid,2026-09-27 21:04:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-27 21:04:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1441,customer225@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1442,customer292@example.com,paid,2026-09-27 18:18:00 -0700,fulfilled,USD,13.60,6.95,1.05,21.60,FALL15,2.40,2026-09-27 18:18:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1443,customer293@example.com,paid,2026-09-27 17:29:00 -0700,fulfilled,USD,16.00,0.00,1.24,17.24,FREESHIP,6.95,2026-09-27 17:29:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1444,customer294@example.com,paid,2026-09-27 18:04:00 -0700,fulfilled,USD,30.60,6.95,2.37,39.92,FALL15,5.40,2026-09-27 18:04:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1444,customer294@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1445,customer207@example.com,paid,2026-09-27 11:05:00 -0700,fulfilled,USD,6.80,6.95,0.53,14.28,FALL15,1.20,2026-09-27 11:05:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1446,customer295@example.com,paid,2026-09-27 18:31:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-09-27 18:31:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1447,customer296@example.com,paid,2026-09-27 08:11:00 -0700,fulfilled,USD,108.00,0.00,8.37,116.37,,0.00,2026-09-27 08:11:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1447,customer296@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1447,customer296@example.com,,,,,,,,,,,,1,Enamel Pin Set,14.00,,,
+#1448,customer297@example.com,paid,2026-09-27 15:56:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-27 15:56:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1449,,voided,,fulfilled,USD,60.00,0.00,4.65,64.65,,0.00,2026-09-27 18:20:00 -0700,2,Embroidered Dad Hat,30.00,0.00,2026-09-27 18:20:00 -0700,pos
+#1450,customer298@example.com,paid,2026-09-27 12:40:00 -0700,fulfilled,USD,23.80,6.95,1.84,32.59,FALL15,4.20,2026-09-27 12:40:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1451,customer221@example.com,paid,2026-09-27 17:14:00 -0700,fulfilled,USD,6.80,6.95,0.53,14.28,FALL15,1.20,2026-09-27 17:14:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1452,customer222@example.com,paid,2026-09-27 16:54:00 -0700,fulfilled,USD,23.80,6.95,1.84,32.59,FALL15,4.20,2026-09-27 16:54:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1453,customer299@example.com,paid,2026-09-27 18:34:00 -0700,fulfilled,USD,61.20,6.95,4.74,72.89,WELCOME10,6.80,2026-09-27 18:34:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1453,customer299@example.com,,,,,,,,,,,,2,Embroidered Dad Hat,30.00,,,
+#1454,customer300@example.com,paid,2026-09-28 09:13:00 -0700,fulfilled,USD,110.00,0.00,8.53,118.53,,0.00,2026-09-28 09:13:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1454,customer300@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1454,customer300@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1455,customer301@example.com,paid,2026-09-28 14:12:00 -0700,fulfilled,USD,23.80,6.95,1.84,32.59,FALL15,4.20,2026-09-28 14:12:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1456,customer302@example.com,paid,2026-09-28 14:39:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-28 14:39:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1457,customer303@example.com,paid,2026-09-28 16:59:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-09-28 16:59:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1458,customer304@example.com,paid,2026-09-28 12:15:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-09-28 12:15:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1459,customer305@example.com,paid,2026-09-28 09:46:00 -0700,fulfilled,USD,84.00,0.00,6.51,90.51,,0.00,2026-09-28 09:46:00 -0700,3,Classic Logo Tee,28.00,0.00,,web
+#1460,customer306@example.com,partially_refunded,2026-09-28 08:10:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-28 08:10:00 -0700,1,Heavyweight Hoodie,64.00,68.96,,web
+#1461,,paid,2026-09-28 16:23:00 -0700,fulfilled,USD,82.00,0.00,6.36,88.36,,0.00,2026-09-28 16:23:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,pos
+#1461,,,,,,,,,,,,,1,Crewneck Sweatshirt,52.00,,,
+#1462,customer307@example.com,paid,2026-09-28 15:36:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-28 15:36:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1463,customer308@example.com,paid,2026-09-29 20:49:00 -0700,fulfilled,USD,90.00,0.00,6.98,96.98,WELCOME10,10.00,2026-09-29 20:49:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1463,customer308@example.com,,,,,,,,,,,,2,Canvas Tote,22.00,,,
+#1464,,paid,2026-09-29 20:28:00 -0700,fulfilled,USD,6.80,0.00,0.53,7.33,FALL15,1.20,2026-09-29 20:28:00 -0700,1,Sticker Pack,8.00,0.00,,pos
+#1465,customer309@example.com,paid,2026-09-29 20:00:00 -0700,fulfilled,USD,54.40,6.95,4.22,65.57,FALL15,9.60,2026-09-29 20:00:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1466,customer74@example.com,paid,2026-09-29 13:41:00 -0700,fulfilled,USD,106.00,0.00,8.22,114.22,,0.00,2026-09-29 13:41:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1466,customer74@example.com,,,,,,,,,,,,3,Classic Logo Tee,28.00,,,
+#1467,,paid,2026-09-29 08:57:00 -0700,fulfilled,USD,30.00,0.00,2.33,32.33,,0.00,2026-09-29 08:57:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,pos
+#1468,customer310@example.com,paid,2026-09-29 10:26:00 -0700,fulfilled,USD,54.40,6.95,4.22,65.57,FALL15,9.60,2026-09-29 10:26:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1468,customer310@example.com,,,,,,,,,,,,2,Classic Logo Tee,28.00,,,
+#1469,customer311@example.com,paid,2026-09-29 21:01:00 -0700,fulfilled,USD,25.50,6.95,1.98,34.43,FALL15,4.50,2026-09-29 21:01:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1470,customer312@example.com,paid,2026-09-29 15:18:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-29 15:18:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1471,customer313@example.com,refunded,2026-09-29 14:50:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-09-29 14:50:00 -0700,1,Enamel Pin Set,14.00,22.04,,web
+#1472,customer314@example.com,paid,2026-09-29 10:26:00 -0700,fulfilled,USD,187.00,0.00,14.49,201.49,FALL15,33.00,2026-09-29 10:26:00 -0700,3,Heavyweight Hoodie,64.00,0.00,,web
+#1472,customer314@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1473,customer69@example.com,paid,2026-09-30 09:28:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-30 09:28:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1474,customer315@example.com,paid,2026-09-30 11:46:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-09-30 11:46:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1475,customer316@example.com,paid,2026-09-30 15:05:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-09-30 15:05:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1476,customer256@example.com,paid,2026-09-30 21:16:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-30 21:16:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1477,customer317@example.com,paid,2026-09-30 13:16:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-30 13:16:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1478,customer318@example.com,paid,2026-09-30 20:25:00 -0700,fulfilled,USD,6.80,6.95,0.53,14.28,FALL15,1.20,2026-09-30 20:25:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1479,customer110@example.com,paid,2026-09-30 19:00:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-09-30 19:00:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1480,customer319@example.com,paid,2026-09-30 12:28:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-09-30 12:28:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1481,customer320@example.com,paid,2026-10-01 15:53:00 -0700,fulfilled,USD,47.60,6.95,3.69,58.24,FALL15,8.40,2026-10-01 15:53:00 -0700,2,Classic Logo Tee,28.00,0.00,,web
+#1482,customer79@example.com,paid,2026-10-01 20:19:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-10-01 20:19:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1483,customer321@example.com,paid,2026-10-01 19:07:00 -0700,fulfilled,USD,18.70,6.95,1.45,27.10,FALL15,3.30,2026-10-01 19:07:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1484,,paid,2026-10-01 16:20:00 -0700,fulfilled,USD,128.00,0.00,9.92,137.92,,0.00,2026-10-01 16:20:00 -0700,2,Heavyweight Hoodie,64.00,0.00,,pos
+#1485,customer322@example.com,paid,2026-10-01 13:36:00 -0700,fulfilled,USD,25.50,6.95,1.98,34.43,FALL15,4.50,2026-10-01 13:36:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1486,customer288@example.com,paid,2026-10-01 16:39:00 -0700,fulfilled,USD,114.00,0.00,8.83,122.83,,0.00,2026-10-01 16:39:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1486,customer288@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1486,customer288@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1487,customer323@example.com,paid,2026-10-01 17:41:00 -0700,fulfilled,USD,132.60,0.00,10.28,142.88,FALL15,23.40,2026-10-01 17:41:00 -0700,3,Crewneck Sweatshirt,52.00,0.00,,web
+#1488,customer324@example.com,paid,2026-10-01 19:39:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-10-01 19:39:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1489,customer69@example.com,paid,2026-10-01 18:26:00 -0700,fulfilled,USD,90.10,0.00,6.98,97.08,FALL15,15.90,2026-10-01 18:26:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1489,customer69@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1489,customer69@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1490,customer325@example.com,partially_refunded,2026-10-01 10:13:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-10-01 10:13:00 -0700,1,Sticker Pack,8.00,8.62,,web
+#1491,customer241@example.com,paid,2026-10-02 14:04:00 -0700,fulfilled,USD,23.80,6.95,1.84,32.59,FALL15,4.20,2026-10-02 14:04:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1492,customer326@example.com,paid,2026-10-02 10:51:00 -0700,fulfilled,USD,64.00,0.00,4.96,68.96,FREESHIP,6.95,2026-10-02 10:51:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1493,customer327@example.com,paid,2026-10-02 18:37:00 -0700,fulfilled,USD,50.00,6.95,3.88,60.83,,0.00,2026-10-02 18:37:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1493,customer327@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1494,customer84@example.com,paid,2026-10-02 13:17:00 -0700,fulfilled,USD,51.00,6.95,3.95,61.90,FALL15,9.00,2026-10-02 13:17:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1495,customer8@example.com,paid,2026-10-02 11:18:00 -0700,fulfilled,USD,78.20,0.00,6.06,84.26,FALL15,13.80,2026-10-02 11:18:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1495,customer8@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1496,customer328@example.com,paid,2026-10-02 16:39:00 -0700,fulfilled,USD,46.00,6.95,3.57,56.52,,0.00,2026-10-02 16:39:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1496,customer328@example.com,,,,,,,,,,,,2,Sticker Pack,8.00,,,
+#1497,customer329@example.com,paid,2026-10-02 11:01:00 -0700,fulfilled,USD,84.00,0.00,6.51,90.51,,0.00,2026-10-02 11:01:00 -0700,3,Classic Logo Tee,28.00,0.00,,web
+#1498,customer330@example.com,paid,2026-10-02 14:04:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-10-02 14:04:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1499,customer274@example.com,paid,2026-10-02 16:21:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-10-02 16:21:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1500,customer331@example.com,paid,2026-10-02 16:57:00 -0700,fulfilled,USD,11.90,6.95,0.92,19.77,FALL15,2.10,2026-10-02 16:57:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1501,customer24@example.com,paid,2026-10-02 18:56:00 -0700,fulfilled,USD,23.80,6.95,1.84,32.59,FALL15,4.20,2026-10-02 18:56:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1502,customer224@example.com,paid,2026-10-02 13:22:00 -0700,fulfilled,USD,44.20,6.95,3.43,54.58,FALL15,7.80,2026-10-02 13:22:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1503,customer332@example.com,paid,2026-10-02 11:33:00 -0700,fulfilled,USD,16.00,6.95,1.24,24.19,,0.00,2026-10-02 11:33:00 -0700,2,Sticker Pack,8.00,0.00,,web
+#1504,customer333@example.com,paid,2026-10-03 08:14:00 -0700,fulfilled,USD,11.90,6.95,0.92,19.77,FALL15,2.10,2026-10-03 08:14:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1505,customer94@example.com,paid,2026-10-03 12:13:00 -0700,fulfilled,USD,36.00,6.95,2.79,45.74,,0.00,2026-10-03 12:13:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1505,customer94@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1506,customer334@example.com,paid,2026-10-03 13:29:00 -0700,fulfilled,USD,158.00,0.00,12.25,170.25,,0.00,2026-10-03 13:29:00 -0700,2,Heavyweight Hoodie,64.00,0.00,,web
+#1506,customer334@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1507,customer320@example.com,paid,2026-10-03 16:23:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-10-03 16:23:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1508,customer25@example.com,partially_refunded,2026-10-03 20:22:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-10-03 20:22:00 -0700,1,Classic Logo Tee,28.00,30.17,,web
+#1508,customer25@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1509,customer335@example.com,paid,2026-10-03 13:54:00 -0700,fulfilled,USD,14.00,6.95,1.09,22.04,,0.00,2026-10-03 13:54:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1510,customer336@example.com,paid,2026-10-03 20:36:00 -0700,fulfilled,USD,54.40,6.95,4.22,65.57,FALL15,9.60,2026-10-03 20:36:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1511,customer337@example.com,paid,2026-10-03 16:50:00 -0700,fulfilled,USD,11.90,6.95,0.92,19.77,FALL15,2.10,2026-10-03 16:50:00 -0700,1,Enamel Pin Set,14.00,0.00,,web
+#1512,customer56@example.com,paid,2026-10-03 11:35:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-10-03 11:35:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1513,customer338@example.com,paid,2026-10-03 21:14:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-10-03 21:14:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1514,customer26@example.com,paid,2026-10-03 12:36:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-10-03 12:36:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1515,customer339@example.com,paid,2026-10-03 18:44:00 -0700,fulfilled,USD,72.00,6.95,5.58,84.53,,0.00,2026-10-03 18:44:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1515,customer339@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1516,customer340@example.com,paid,2026-10-03 09:46:00 -0700,fulfilled,USD,25.50,6.95,1.98,34.43,FALL15,4.50,2026-10-03 09:46:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1516,customer340@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1517,customer341@example.com,paid,2026-10-03 15:20:00 -0700,fulfilled,USD,64.00,6.95,4.96,75.91,,0.00,2026-10-03 15:20:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1518,customer342@example.com,paid,2026-10-03 12:44:00 -0700,fulfilled,USD,23.80,6.95,1.84,32.59,FALL15,4.20,2026-10-03 12:44:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1519,customer343@example.com,paid,2026-10-04 11:44:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-10-04 11:44:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1520,,paid,2026-10-04 09:20:00 -0700,fulfilled,USD,90.10,0.00,6.98,97.08,FALL15,15.90,2026-10-04 09:20:00 -0700,3,Classic Logo Tee,28.00,0.00,,pos
+#1520,,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1521,customer344@example.com,paid,2026-10-04 18:42:00 -0700,fulfilled,USD,74.00,0.00,5.74,79.74,FREESHIP,6.95,2026-10-04 18:42:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1521,customer344@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1522,customer271@example.com,paid,2026-10-04 13:21:00 -0700,fulfilled,USD,80.00,0.00,6.20,86.20,,0.00,2026-10-04 13:21:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1522,customer271@example.com,,,,,,,,,,,,2,Sticker Pack,8.00,,,
+#1523,,paid,2026-10-04 16:20:00 -0700,fulfilled,USD,156.00,0.00,12.09,168.09,,0.00,2026-10-04 16:20:00 -0700,3,Crewneck Sweatshirt,52.00,0.00,,pos
+#1524,customer256@example.com,paid,2026-10-04 16:22:00 -0700,fulfilled,USD,86.00,0.00,6.67,92.67,,0.00,2026-10-04 16:22:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1524,customer256@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1525,customer345@example.com,paid,2026-10-04 16:46:00 -0700,fulfilled,USD,82.00,0.00,6.36,88.36,,0.00,2026-10-04 16:46:00 -0700,2,Embroidered Dad Hat,30.00,0.00,,web
+#1525,customer345@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1526,customer113@example.com,paid,2026-10-04 14:34:00 -0700,fulfilled,USD,92.00,0.00,7.13,99.13,,0.00,2026-10-04 14:34:00 -0700,3,Classic Logo Tee,28.00,0.00,,web
+#1526,customer113@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1527,customer346@example.com,paid,2026-10-04 16:55:00 -0700,fulfilled,USD,30.00,0.00,2.33,32.33,FREESHIP,6.95,2026-10-04 16:55:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1528,customer38@example.com,paid,2026-10-04 16:48:00 -0700,fulfilled,USD,100.00,0.00,7.75,107.75,,0.00,2026-10-04 16:48:00 -0700,1,Heavyweight Hoodie,64.00,0.00,,web
+#1528,customer38@example.com,,,,,,,,,,,,1,Classic Logo Tee,28.00,,,
+#1528,customer38@example.com,,,,,,,,,,,,1,Sticker Pack,8.00,,,
+#1529,customer347@example.com,paid,2026-10-04 17:32:00 -0700,fulfilled,USD,18.70,6.95,1.45,27.10,FALL15,3.30,2026-10-04 17:32:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1530,customer291@example.com,paid,2026-10-04 15:17:00 -0700,fulfilled,USD,52.00,6.95,4.03,62.98,,0.00,2026-10-04 15:17:00 -0700,1,Crewneck Sweatshirt,52.00,0.00,,web
+#1531,customer46@example.com,paid,2026-10-05 09:30:00 -0700,fulfilled,USD,88.40,0.00,6.85,95.25,FALL15,15.60,2026-10-05 09:30:00 -0700,2,Crewneck Sweatshirt,52.00,0.00,,web
+#1532,customer348@example.com,paid,2026-10-05 10:28:00 -0700,fulfilled,USD,25.50,6.95,1.98,34.43,FALL15,4.50,2026-10-05 10:28:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1532,customer348@example.com,,,,,,,,,,,,1,Canvas Tote,22.00,,,
+#1533,customer349@example.com,paid,2026-10-05 17:39:00 -0700,fulfilled,USD,28.00,6.95,2.17,37.12,,0.00,2026-10-05 17:39:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1534,customer19@example.com,paid,2026-10-05 08:31:00 -0700,fulfilled,USD,30.00,6.95,2.33,39.28,,0.00,2026-10-05 08:31:00 -0700,1,Embroidered Dad Hat,30.00,0.00,,web
+#1535,customer350@example.com,paid,2026-10-05 17:19:00 -0700,fulfilled,USD,18.70,6.95,1.45,27.10,FALL15,3.30,2026-10-05 17:19:00 -0700,1,Canvas Tote,22.00,0.00,,web
+#1536,customer351@example.com,paid,2026-10-05 09:27:00 -0700,fulfilled,USD,25.20,6.95,1.95,34.10,WELCOME10,2.80,2026-10-05 09:27:00 -0700,1,Classic Logo Tee,28.00,0.00,,web
+#1537,customer225@example.com,refunded,2026-10-06 19:26:00 -0700,fulfilled,USD,22.00,6.95,1.71,30.66,,0.00,2026-10-06 19:26:00 -0700,1,Canvas Tote,22.00,30.66,,web
+#1538,customer352@example.com,paid,2026-10-06 11:43:00 -0700,fulfilled,USD,84.00,0.00,6.51,90.51,,0.00,2026-10-06 11:43:00 -0700,3,Classic Logo Tee,28.00,0.00,,web
+#1539,customer353@example.com,paid,2026-10-06 11:27:00 -0700,fulfilled,USD,262.00,0.00,20.31,282.31,,0.00,2026-10-06 11:27:00 -0700,2,Crewneck Sweatshirt,52.00,0.00,,web
+#1539,customer353@example.com,,,,,,,,,,,,2,Heavyweight Hoodie,64.00,,,
+#1539,customer353@example.com,,,,,,,,,,,,1,Embroidered Dad Hat,30.00,,,
+#1540,customer66@example.com,paid,2026-10-06 21:43:00 -0700,fulfilled,USD,8.00,6.95,0.62,15.57,,0.00,2026-10-06 21:43:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1541,customer354@example.com,paid,2026-10-06 14:10:00 -0700,fulfilled,USD,61.20,6.95,4.74,72.89,FALL15,10.80,2026-10-06 14:10:00 -0700,1,Sticker Pack,8.00,0.00,,web
+#1541,customer354@example.com,,,,,,,,,,,,1,Heavyweight Hoodie,64.00,,,
+#1542,customer185@example.com,paid,2026-10-06 16:14:00 -0700,fulfilled,USD,56.00,6.95,4.34,67.29,,0.00,2026-10-06 16:14:00 -0700,2,Classic Logo Tee,28.00,0.00,,web

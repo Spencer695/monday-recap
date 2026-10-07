@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Turn a Shopify orders export into a weekly sales report with a plain English summary.">
+<title>Monday Recap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700&display=swap">
+<style>
+/* Layout: one report column, story first (summary), then KPI row, daily chart, and two detail tables. */
+:root {
+  --bg: #f3f3f0;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --line: rgba(11, 11, 11, 0.10);
+  --accent: #2a78d6;
+  --accent-ink: #1c5cab;
+  --accent-wash: #e6f0fc;
+  --last: #c9c7bf;
+  --up: #006300;
+  --down: #c03232;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --line: rgba(255, 255, 255, 0.10);
+    --accent: #3987e5; --accent-ink: #86b6ef; --accent-wash: #15253a; --last: #4b4a46;
+    --up: #0ca30c; --down: #e66767; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --line: rgba(255, 255, 255, 0.10);
+  --accent: #3987e5; --accent-ink: #86b6ef; --accent-wash: #15253a; --last: #4b4a46;
+  --up: #0ca30c; --down: #e66767; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 48px; display: grid; gap: 20px; }
+
+header.top { display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: end; justify-content: space-between; }
+.brand { min-width: 0; }
+.brand h1 { font-family: var(--font-display); font-size: 34px; line-height: 1.05; margin: 0; letter-spacing: -0.5px; text-wrap: balance; }
+.brand p { margin: 6px 0 0; color: var(--ink-2); max-width: 52ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+button, .btn { white-space: nowrap; font: inherit; font-weight: 700; font-size: 14px; border-radius: 8px; padding: 9px 14px; cursor: pointer; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+button:hover, .btn:hover { border-color: var(--axis); }
+button.primary, .btn.primary { background: var(--accent); border-color: var(--accent); color: #ffffff; }
+button.primary:hover, .btn.primary:hover { filter: brightness(1.08); }
+button:focus-visible, .btn:focus-visible, select:focus-visible, summary:focus-visible, rect:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.note { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; font-size: 14px; color: var(--ink-2); }
+.note .lock { display: inline-flex; gap: 6px; align-items: center; }
+.banner { background: var(--accent-wash); border-radius: 10px; padding: 12px 14px; font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; justify-content: space-between; }
+.banner b { color: var(--ink); }
+.error { background: var(--surface); border: 1px solid var(--down); border-radius: 10px; padding: 12px 14px; font-size: 14px; }
+.error b { color: var(--down); }
+
+.weekbar { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; }
+.weekpick { display: flex; gap: 6px; align-items: center; min-width: 0; }
+.weekpick button { padding: 8px 11px; line-height: 1; }
+.weekpick button:disabled { opacity: 0.4; cursor: default; }
+select { font: inherit; font-weight: 700; font-size: 15px; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); max-width: 100%; min-width: 0; }
+.source { font-size: 14px; color: var(--ink-2); }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; min-width: 0; }
+.card h2 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 10px; font-weight: 700; }
+.summary p { margin: 0; font-size: 17px; line-height: 1.6; max-width: 70ch; }
+.summary .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
+.summary .row h2 { margin: 0; }
+
+.kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.kpi .label { font-size: 13px; color: var(--ink-2); }
+.kpi .value { font-size: 26px; font-weight: 700; line-height: 1.15; overflow-wrap: anywhere; }
+.kpi .delta { font-size: 13px; font-weight: 700; display: flex; flex-wrap: wrap; gap: 2px 6px; align-items: baseline; }
+.kpi .delta .vs { font-weight: 400; color: var(--ink-2); }
+.up { color: var(--up); }
+.down { color: var(--down); }
+.flat { color: var(--ink-2); }
+
+.chart-head { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+.chart-head h2 { margin: 0; }
+.legend { display: flex; gap: 14px; font-size: 13px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: var(--font-body); }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--line); box-shadow: 0 4px 16px rgba(0,0,0,0.12); border-radius: 8px; padding: 8px 10px; font-size: 13px; line-height: 1.45; white-space: nowrap; z-index: 2; }
+.tip b { display: block; margin-bottom: 2px; }
+.tip i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; }
+
+details { font-size: 14px; }
+details summary { cursor: pointer; color: var(--accent-ink); font-weight: 700; margin-top: 10px; width: fit-content; }
+.tablewrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--grid); vertical-align: baseline; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-2); font-weight: 700; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td .code { font-weight: 700; letter-spacing: 0.03em; }
+.empty { color: var(--ink-2); margin: 4px 0 0; }
+.foot-row td { color: var(--ink-2); }
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.defs { font-size: 13px; color: var(--ink-2); }
+.defs ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+.howto ol { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 4px; color: var(--ink-2); }
+
+.dropping::after { content: "Drop your Shopify orders CSV to build the report"; position: fixed; inset: 12px; border: 3px dashed var(--accent); border-radius: 16px; background: color-mix(in srgb, var(--bg) 88%, transparent); display: grid; place-items: center; font-family: var(--font-display); font-size: 24px; color: var(--ink); z-index: 10; text-align: center; padding: 16px; }
+
+@media (max-width: 760px) {
+  .kpis { grid-template-columns: 1fr 1fr; }
+  .kpis .kpi:first-child { grid-column: 1 / -1; }
+  .two { grid-template-columns: 1fr; }
+  .brand h1 { font-size: 30px; }
+  .card { padding: 16px 14px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 4px; }
+  th { font-size: 11px; letter-spacing: 0.04em; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .kpi, .card { transition: border-color 0.15s; }
+}
+@media print {
+  .actions, .banner, .weekpick button, .howto, details, .note { display: none !important; }
+  body { background: #ffffff; }
+  .card, .kpi { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <header class="top">
+    <div class="brand">
+      <h1>Monday Recap</h1>
+      <p>Turn a Shopify orders export into last week's sales report: the numbers, how they compare, and a summary you can send the owner.</p>
+    </div>
+    <div class="actions">
+      <label class="btn primary" for="file">Load Shopify export</label>
+      <input class="sr" type="file" id="file" accept=".csv,text/csv">
+      <button type="button" id="sampleBtn" hidden>Show sample data</button>
+    </div>
+  </header>
+
+  <div class="note">
+    <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 0 1 6 0v3H9Z"/></svg>Your file is read in this browser and never uploaded.</span>
+    <span>You can also drag the CSV onto this page.</span>
+  </div>
+
+  <div class="banner" id="sampleBanner">
+    <span><b>Sample data.</b> These numbers come from a made-up shop. Load your own Shopify export to replace them.</span>
+  </div>
+  <div class="error" id="error" hidden></div>
+
+  <div class="weekbar">
+    <div class="weekpick">
+      <button type="button" id="prevWeek" aria-label="Previous week">&#8249;</button>
+      <label class="sr" for="week">Report week</label>
+      <select id="week"></select>
+      <button type="button" id="nextWeek" aria-label="Next week">&#8250;</button>
+    </div>
+    <div class="source" id="source"></div>
+  </div>
+
+  <section class="card summary" aria-labelledby="sumHead">
+    <div class="row">
+      <h2 id="sumHead">Summary for the owner</h2>
+      <button type="button" id="copyBtn">Copy summary</button>
+    </div>
+    <p id="summary"></p>
+  </section>
+
+  <section class="kpis" id="kpis" aria-label="Key numbers"></section>
+
+  <section class="card" aria-labelledby="chartHead">
+    <div class="chart-head">
+      <h2 id="chartHead">Revenue by day</h2>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="chart" id="chart"></div>
+    <details>
+      <summary>Daily numbers as a table</summary>
+      <div class="tablewrap" id="dailyTable"></div>
+    </details>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="prodHead">
+      <h2 id="prodHead">Top products</h2>
+      <div class="tablewrap" id="products"></div>
+    </section>
+    <section class="card" aria-labelledby="codeHead">
+      <h2 id="codeHead">Discount codes</h2>
+      <div class="tablewrap" id="codes"></div>
+    </section>
+  </div>
+
+  <section class="card howto" aria-labelledby="howHead">
+    <h2 id="howHead">How to get the file from Shopify</h2>
+    <ol>
+      <li>In your Shopify admin, open <b>Orders</b> and click <b>Export</b>.</li>
+      <li>Choose a date range that covers at least the last two weeks. A few months gives better new customer counts.</li>
+      <li>Pick <b>CSV for Excel, Numbers, or other spreadsheet programs</b> and export.</li>
+      <li>Load the file here with the button above, or drag it onto the page.</li>
+    </ol>
+  </section>
+
+  <section class="defs" aria-label="How the numbers are calculated">
+    <b>How the numbers are calculated</b>
+    <ul>
+      <li>Weeks run Monday to Sunday, using the order dates in your export.</li>
+      <li>Revenue is the order total, including shipping and tax, minus refunds. Refunds count in the week the order was placed.</li>
+      <li>Canceled and voided orders are left out of every number.</li>
+      <li>A new customer is someone whose first order in your file falls in that week, matched by email. Orders without an email count toward sales only.</li>
+      <li>Product sales use item price times quantity, before order discounts.</li>
+    </ul>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script>
+// ==CORE START==
+const REQUIRED = ['Name', 'Created at', 'Total', 'Lineitem quantity', 'Lineitem name', 'Lineitem price'];
+const DAY = 86400000;
+
+function num(v) {
+  if (v == null) return 0;
+  const n = parseFloat(String(v).replace(/[^0-9.\-]/g, ''));
+  return isFinite(n) ? n : 0;
+}
+function dateKey(v) {
+  const m = String(v || '').match(/(\d{4})-(\d{2})-(\d{2})/);
+  return m ? m[1] + '-' + m[2] + '-' + m[3] : null;
+}
+function toUTC(k) { const p = k.split('-').map(Number); return Date.UTC(p[0], p[1] - 1, p[2]); }
+function fromUTC(t) { return new Date(t).toISOString().slice(0, 10); }
+function addDays(k, n) { return fromUTC(toUTC(k) + n * DAY); }
+function mondayOf(k) { const dow = new Date(toUTC(k)).getUTCDay(); return addDays(k, -((dow + 6) % 7)); }
+
+function missingColumns(fields) { return REQUIRED.filter(c => !fields.includes(c)); }
+
+// Shopify puts one row per line item. Order-level fields are filled on the first row of each order.
+function buildOrders(rows) {
+  const byName = new Map();
+  const all = [];
+  let currency = '';
+  for (const r of rows) {
+    const name = String(r['Name'] || '').trim();
+    if (!name) continue;
+    let o = byName.get(name);
+    if (!o) {
+      o = { name, items: [], date: null, email: '', status: '', total: 0, refunded: 0, code: '', discount: 0, canceled: false };
+      byName.set(name, o);
+      all.push(o);
+    }
+    const d = dateKey(r['Created at']);
+    if (d && !o.date) {
+      o.date = d;
+      o.email = String(r['Email'] || '').trim().toLowerCase();
+      o.status = String(r['Financial Status'] || '').trim().toLowerCase();
+      o.total = num(r['Total']);
+      o.refunded = num(r['Refunded Amount']);
+      o.code = String(r['Discount Code'] || '').trim().toUpperCase();
+      o.discount = num(r['Discount Amount']);
+      o.canceled = String(r['Canceled at'] || '').trim() !== '';
+      if (!currency && r['Currency']) currency = String(r['Currency']).trim().toUpperCase();
+    }
+    const q = num(r['Lineitem quantity']);
+    const item = String(r['Lineitem name'] || '').trim();
+    if (item && q) o.items.push({ name: item, qty: q, price: num(r['Lineitem price']) });
+  }
+  const orders = all.filter(o => o.date && !o.canceled && o.status !== 'voided' && o.status !== 'expired');
+  return { orders, skipped: all.length - orders.length, currency: currency || 'USD' };
+}
+
+function analyze(orders) {
+  const first = new Map();
+  for (const o of orders) {
+    if (!o.email) continue;
+    const f = first.get(o.email);
+    if (!f || o.date < f) first.set(o.email, o.date);
+  }
+  const dates = orders.map(o => o.date).sort();
+  const min = dates[0], max = dates[dates.length - 1];
+  const weeks = [];
+  for (let w = mondayOf(min); w <= max; w = addDays(w, 7)) weeks.push({ start: w, end: addDays(w, 6), complete: addDays(w, 6) <= max });
+  return { first, min, max, weeks };
+}
+
+function defaultWeek(weeks) {
+  const done = weeks.filter(w => w.complete);
+  return (done.length ? done[done.length - 1] : weeks[weeks.length - 1]).start;
+}
+
+function metrics(orders, first, start) {
+  const end = addDays(start, 6);
+  const inWeek = orders.filter(o => o.date >= start && o.date <= end);
+  const days = Array.from({ length: 7 }, (_, i) => ({ date: addDays(start, i), revenue: 0, orders: 0 }));
+  let revenue = 0, refunds = 0, units = 0, codeOrders = 0;
+  const products = new Map(), codes = new Map(), emails = new Set();
+  for (const o of inWeek) {
+    const net = o.total - o.refunded;
+    revenue += net;
+    refunds += o.refunded;
+    const i = Math.round((toUTC(o.date) - toUTC(start)) / DAY);
+    days[i].revenue += net;
+    days[i].orders += 1;
+    for (const it of o.items) {
+      units += it.qty;
+      const p = products.get(it.name) || { name: it.name, units: 0, sales: 0 };
+      p.units += it.qty;
+      p.sales += it.qty * it.price;
+      products.set(it.name, p);
+    }
+    if (o.code) {
+      codeOrders += 1;
+      const c = codes.get(o.code) || { code: o.code, orders: 0, revenue: 0, discount: 0 };
+      c.orders += 1;
+      c.revenue += net;
+      c.discount += o.discount;
+      codes.set(o.code, c);
+    }
+    if (o.email) emails.add(o.email);
+  }
+  let newCustomers = 0, returningCustomers = 0;
+  for (const e of emails) {
+    const f = first.get(e);
+    if (f >= start && f <= end) newCustomers += 1; else returningCustomers += 1;
+  }
+  return {
+    start, end, orders: inWeek.length, revenue, refunds, units,
+    aov: inWeek.length ? revenue / inWeek.length : 0,
+    newCustomers, returningCustomers, days, codeOrders,
+    products: [...products.values()].sort((a, b) => b.sales - a.sales || b.units - a.units),
+    codes: [...codes.values()].sort((a, b) => b.orders - a.orders || b.revenue - a.revenue)
+  };
+}
+
+function change(cur, prev) {
+  if (!prev) return cur ? null : 0;
+  return (cur - prev) / Math.abs(prev);
+}
+
+function makeFormat(currency) {
+  let cur;
+  try { cur = new Intl.NumberFormat('en-US', { style: 'currency', currency }); }
+  catch (e) { cur = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }); }
+  const whole = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+  const day = (k, opts) => new Date(toUTC(k)).toLocaleDateString('en-US', Object.assign({ timeZone: 'UTC' }, opts));
+  return {
+    money: v => cur.format(Math.round(v * 100) / 100),
+    n: v => whole.format(v),
+    pct: v => Math.round(Math.abs(v) * 100) + '%',
+    short: k => day(k, { month: 'short', day: 'numeric' }),
+    range: (a, b) => {
+      const sameMonth = a.slice(0, 7) === b.slice(0, 7);
+      const left = day(a, { month: 'short', day: 'numeric' });
+      const right = sameMonth ? day(b, { day: 'numeric' }) : day(b, { month: 'short', day: 'numeric' });
+      return left + ' – ' + right + ', ' + b.slice(0, 4);
+    },
+    weekday: (k, long) => day(k, { weekday: long ? 'long' : 'short' })
+  };
+}
+
+function trend(ch, f) {
+  if (ch === null) return 'up from nothing';
+  if (Math.abs(ch) < 0.005) return 'about the same as';
+  return (ch > 0 ? 'up ' : 'down ') + f.pct(ch) + ' from';
+}
+
+function summaryText(cur, prev, hasPrev, f) {
+  const out = [];
+  if (!cur.orders) return 'No orders were placed the week of ' + f.range(cur.start, cur.end) + '.';
+  let s = 'Week of ' + f.range(cur.start, cur.end) + ': revenue was ' + f.money(cur.revenue) + ' from ' + f.n(cur.orders) + (cur.orders === 1 ? ' order' : ' orders');
+  if (hasPrev) {
+    const t = trend(change(cur.revenue, prev.revenue), f);
+    s += ', ' + t + (t === 'up from nothing' ? ' the week before.' : ' the week before (' + f.money(prev.revenue) + ').');
+  } else s += '.';
+  out.push(s);
+  let a = 'The average order was ' + f.money(cur.aov);
+  if (hasPrev && prev.orders) {
+    const ch = change(cur.aov, prev.aov);
+    a += Math.abs(ch) < 0.005 ? ', unchanged.' : ', ' + (ch > 0 ? 'up ' : 'down ') + f.pct(ch) + '.';
+  } else a += '.';
+  out.push(a);
+  if (cur.newCustomers || cur.returningCustomers) {
+    const nc = cur.newCustomers, rc = cur.returningCustomers;
+    out.push(f.n(nc) + (nc === 1 ? ' new customer' : ' new customers') + ' placed a first order and ' + f.n(rc) + (rc === 1 ? ' returning customer' : ' returning customers') + ' ordered again.');
+  }
+  if (cur.products.length) {
+    const p = cur.products[0];
+    out.push('Top seller: ' + p.name + ', with ' + f.money(p.sales) + ' in sales (' + f.n(p.units) + ' sold).');
+  }
+  if (cur.codes.length) {
+    const c = cur.codes[0];
+    let t = 'Code ' + c.code + ' was used on ' + f.n(c.orders) + (c.orders === 1 ? ' order' : ' orders') + ', bringing in ' + f.money(c.revenue) + ' with ' + f.money(c.discount) + ' in discounts.';
+    if (cur.codes.length > 1) t += ' In total, ' + f.n(cur.codeOrders) + ' of ' + f.n(cur.orders) + ' orders used a code.';
+    out.push(t);
+  }
+  if (cur.refunds > 0) out.push('Refunds on this week\'s orders came to ' + f.money(cur.refunds) + '.');
+  return out.join(' ');
+}
+
+// A made-up apparel shop, so the page opens with a realistic report. Deterministic for a given end date.
+function makeSampleCSV(today) {
+  let seed = 20261005;
+  const rnd = () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const products = [['Classic Logo Tee', 28], ['Heavyweight Hoodie', 64], ['Embroidered Dad Hat', 30], ['Canvas Tote', 22], ['Sticker Pack', 8], ['Crewneck Sweatshirt', 52], ['Enamel Pin Set', 14]];
+  const weights = [30, 14, 14, 10, 16, 9, 7];
+  const totalW = weights.reduce((a, b) => a + b, 0);
+  const pick = () => { let r = rnd() * totalW; for (let i = 0; i < weights.length; i++) { r -= weights[i]; if (r <= 0) return i; } return 0; };
+  const r2 = v => Math.round(v * 100) / 100;
+  const last = addDays(today, -1);
+  const startDay = addDays(mondayOf(last), -63);
+  const dayMult = [0.8, 0.85, 0.9, 1.0, 1.25, 1.5, 1.2];
+  const header = ['Name', 'Email', 'Financial Status', 'Paid at', 'Fulfillment Status', 'Currency', 'Subtotal', 'Shipping', 'Taxes', 'Total', 'Discount Code', 'Discount Amount', 'Created at', 'Lineitem quantity', 'Lineitem name', 'Lineitem price', 'Refunded Amount', 'Canceled at', 'Source'];
+  const rows = [header];
+  const pool = [];
+  let orderNo = 1001;
+  for (let d = startDay; d <= last; d = addDays(d, 1)) {
+    const idx = Math.round((toUTC(d) - toUTC(startDay)) / DAY);
+    const week = Math.floor(idx / 7), dow = idx % 7;
+    const promo = week >= 7;
+    let lam = 7 * dayMult[dow] * (1 + week * 0.03) * (promo ? 1.15 : 1);
+    const count = Math.max(0, Math.round(lam + (rnd() - 0.5) * 5));
+    for (let k = 0; k < count; k++) {
+      const pos = rnd() < 0.08;
+      let email = '', isNew = true;
+      if (!pos) {
+        if (pool.length > 15 && rnd() < 0.3) { email = pool[Math.floor(rnd() * pool.length)]; isNew = false; }
+        else { email = 'customer' + (pool.length + 1) + '@example.com'; pool.push(email); }
+      }
+      const nItems = rnd() < 0.6 ? 1 : (rnd() < 0.7 ? 2 : 3);
+      const items = new Map();
+      for (let j = 0; j < nItems; j++) { const i = pick(); items.set(i, (items.get(i) || 0) + (rnd() < 0.85 ? 1 : 2)); }
+      let before = 0;
+      for (const [i, q] of items) before += products[i][1] * q;
+      let code = '';
+      if (promo && rnd() < 0.3) code = 'FALL15';
+      else if (isNew && !pos && rnd() < 0.15) code = 'WELCOME10';
+      else if (!pos && rnd() < 0.05) code = 'FREESHIP';
+      let shipping = pos || before >= 75 ? 0 : 6.95;
+      let discount = 0;
+      if (code === 'FALL15') discount = r2(before * 0.15);
+      if (code === 'WELCOME10') discount = r2(before * 0.10);
+      if (code === 'FREESHIP') { discount = shipping; shipping = 0; }
+      const subtotal = r2(before - (code === 'FREESHIP' ? 0 : discount));
+      const taxes = r2(subtotal * 0.0775);
+      const total = r2(subtotal + shipping + taxes);
+      const roll = rnd();
+      let status = 'paid', refunded = 0, canceled = '';
+      const hh = String(8 + Math.floor(rnd() * 14)).padStart(2, '0'), mm = String(Math.floor(rnd() * 60)).padStart(2, '0');
+      const stamp = d + ' ' + hh + ':' + mm + ':00 -0700';
+      const firstItem = [...items.keys()][0];
+      if (roll < 0.03) { status = 'refunded'; refunded = total; }
+      else if (roll < 0.05) { status = 'partially_refunded'; refunded = r2(products[firstItem][1] * 1.0775); }
+      else if (roll < 0.065) { status = 'voided'; canceled = stamp; }
+      let firstRow = true;
+      for (const [i, q] of items) {
+        if (firstRow) rows.push(['#' + orderNo, email, status, status === 'voided' ? '' : stamp, 'fulfilled', 'USD', subtotal.toFixed(2), shipping.toFixed(2), taxes.toFixed(2), total.toFixed(2), code, discount.toFixed(2), stamp, String(q), products[i][0], products[i][1].toFixed(2), refunded.toFixed(2), canceled, pos ? 'pos' : 'web']);
+        else rows.push(['#' + orderNo, email, '', '', '', '', '', '', '', '', '', '', '', String(q), products[i][0], products[i][1].toFixed(2), '', '', '']);
+        firstRow = false;
+      }
+      orderNo += 1;
+    }
+  }
+  const esc = v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+  return rows.map(r => r.map(esc).join(',')).join('\n') + '\n';
+}
+// ==CORE END==
+
+(function () {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const state = { data: null, info: null, week: null, sample: true, label: '', fmt: makeFormat('USD') };
+
+  function localToday() {
+    const t = new Date();
+    return t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' + String(t.getDate()).padStart(2, '0');
+  }
+
+  function showError(html) { const e = $('error'); e.innerHTML = html; e.hidden = false; }
+  function clearError() { $('error').hidden = true; }
+
+  function loadCSV(text, label, isSample) {
+    const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+    const clean = k => String(k).replace(/^\ufeff/, '').trim();
+    const fields = (parsed.meta.fields || []).map(clean);
+    parsed.data = parsed.data.map(r => { const o = {}; for (const k in r) o[clean(k)] = r[k]; return o; });
+    const missing = missingColumns(fields);
+    if (missing.length) {
+      showError('<b>This file is missing columns the report needs:</b> ' + missing.map(esc).join(', ') + '. Export it again from Shopify under Orders, then Export, and choose the CSV for spreadsheet programs.');
+      return;
+    }
+    const built = buildOrders(parsed.data);
+    if (!built.orders.length) { showError('<b>No orders found.</b> The file has the right columns but no orders with a date. Try exporting a wider date range.'); return; }
+    clearError();
+    state.data = built;
+    state.info = analyze(built.orders);
+    state.week = defaultWeek(state.info.weeks);
+    state.sample = isSample;
+    state.label = label;
+    state.fmt = makeFormat(built.currency);
+    $('sampleBanner').hidden = !isSample;
+    $('sampleBtn').hidden = isSample;
+    fillWeeks();
+    render();
+  }
+
+  function fillWeeks() {
+    const sel = $('week'), f = state.fmt;
+    sel.innerHTML = state.info.weeks.slice().reverse().map(w =>
+      '<option value="' + w.start + '"' + (w.start === state.week ? ' selected' : '') + '>Week of ' + esc(f.range(w.start, w.end)) + (w.complete ? '' : ' (so far)') + '</option>').join('');
+  }
+
+  function deltaHTML(cur, prev, hasPrev, fmtPrev) {
+    if (!hasPrev) return '<span class="flat">No earlier week in file</span>';
+    const ch = change(cur, prev);
+    let cls = 'flat', txt = 'No change';
+    if (ch === null) { cls = 'up'; txt = '&#9650; New'; }
+    else if (Math.abs(ch) >= 0.005) { cls = ch > 0 ? 'up' : 'down'; txt = (ch > 0 ? '&#9650; ' : '&#9660; ') + state.fmt.pct(ch); }
+    return '<span class="' + cls + '">' + txt + '</span><span class="vs">vs ' + fmtPrev(prev) + '</span>';
+  }
+
+  function render() {
+    const f = state.fmt, info = state.info, d = state.data;
+    const cur = metrics(d.orders, info.first, state.week);
+    const prevStart = addDays(state.week, -7);
+    const hasPrev = prevStart >= mondayOf(info.min);
+    const prev = metrics(d.orders, info.first, prevStart);
+
+    const idx = info.weeks.findIndex(w => w.start === state.week);
+    $('prevWeek').disabled = idx <= 0;
+    $('nextWeek').disabled = idx >= info.weeks.length - 1;
+    $('week').value = state.week;
+    $('source').textContent = (state.sample ? 'Sample shop' : state.label) + ' · ' + f.n(d.orders.length) + ' orders, ' + f.short(info.min) + ' to ' + f.short(info.max) + (d.skipped ? ' · ' + f.n(d.skipped) + ' canceled or voided left out' : '');
+
+    $('summary').textContent = summaryText(cur, prev, hasPrev, f);
+
+    const tiles = [
+      ['Revenue', f.money(cur.revenue), deltaHTML(cur.revenue, prev.revenue, hasPrev, f.money)],
+      ['Orders', f.n(cur.orders), deltaHTML(cur.orders, prev.orders, hasPrev, f.n)],
+      ['Average order', f.money(cur.aov), deltaHTML(cur.aov, prev.aov, hasPrev && prev.orders > 0, f.money)],
+      ['Units sold', f.n(cur.units), deltaHTML(cur.units, prev.units, hasPrev, f.n)],
+      ['New customers', f.n(cur.newCustomers), deltaHTML(cur.newCustomers, prev.newCustomers, hasPrev, f.n)]
+    ];
+    $('kpis').innerHTML = tiles.map(t => '<div class="kpi"><span class="label">' + t[0] + '</span><span class="value">' + t[1] + '</span><span class="delta">' + t[2] + '</span></div>').join('');
+
+    $('legend').innerHTML = '<span><i style="background:var(--accent)"></i>This week</span>' + (hasPrev ? '<span><i style="background:var(--last)"></i>Week before</span>' : '');
+    drawChart(cur, prev, hasPrev);
+
+    $('dailyTable').innerHTML = '<table><thead><tr><th>Day</th><th class="n">Revenue</th><th class="n">Orders</th>' + (hasPrev ? '<th class="n">Week before</th>' : '') + '</tr></thead><tbody>' +
+      cur.days.map((x, i) => '<tr><td>' + esc(f.weekday(x.date) + ' ' + f.short(x.date)) + '</td><td class="n">' + f.money(x.revenue) + '</td><td class="n">' + f.n(x.orders) + '</td>' + (hasPrev ? '<td class="n">' + f.money(prev.days[i].revenue) + '</td>' : '') + '</tr>').join('') + '</tbody></table>';
+
+    const top = cur.products.slice(0, 5);
+    $('products').innerHTML = top.length ? '<table><thead><tr><th>Product</th><th class="n">Units</th><th class="n">Sales</th></tr></thead><tbody>' +
+      top.map(p => '<tr><td>' + esc(p.name) + '</td><td class="n">' + f.n(p.units) + '</td><td class="n">' + f.money(p.sales) + '</td></tr>').join('') +
+      (cur.products.length > 5 ? '<tr class="foot-row"><td colspan="3">' + f.n(cur.products.length - 5) + ' more products sold this week</td></tr>' : '') + '</tbody></table>'
+      : '<p class="empty">No products sold this week.</p>';
+
+    $('codes').innerHTML = cur.codes.length ? '<table><thead><tr><th>Code</th><th class="n">Orders</th><th class="n">Revenue</th><th class="n">Discount</th></tr></thead><tbody>' +
+      cur.codes.map(c => '<tr><td><span class="code">' + esc(c.code) + '</span></td><td class="n">' + f.n(c.orders) + '</td><td class="n">' + f.money(c.revenue) + '</td><td class="n">' + f.money(c.discount) + '</td></tr>').join('') +
+      '<tr class="foot-row"><td colspan="4">' + f.n(cur.orders - cur.codeOrders) + ' of ' + f.n(cur.orders) + ' orders used no code</td></tr></tbody></table>'
+      : '<p class="empty">No discount codes were used this week.</p>';
+  }
+
+  function niceStep(max, ticks) {
+    const raw = max / ticks, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    const n = raw / mag;
+    return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * mag;
+  }
+
+  function barPath(x, y, w, h) {
+    const r = Math.min(4, h, w / 2);
+    if (h <= 0) return '';
+    return 'M' + x + ',' + (y + h) + 'V' + (y + r) + 'Q' + x + ',' + y + ' ' + (x + r) + ',' + y + 'H' + (x + w - r) + 'Q' + (x + w) + ',' + y + ' ' + (x + w) + ',' + (y + r) + 'V' + (y + h) + 'Z';
+  }
+
+  function drawChart(cur, prev, hasPrev) {
+    const host = $('chart'), f = state.fmt;
+    const W = Math.max(300, host.clientWidth || 600), H = 230;
+    const ml = 56, mr = 8, mt = 22, mb = 30;
+    const iw = W - ml - mr, ih = H - mt - mb;
+    const vals = cur.days.map(x => x.revenue).concat(hasPrev ? prev.days.map(x => x.revenue) : []);
+    const maxV = Math.max(1, ...vals);
+    const step = niceStep(maxV, 4);
+    const top = Math.ceil(maxV / step) * step;
+    const y = v => mt + ih - (Math.max(0, v) / top) * ih;
+    const gw = iw / 7;
+    const bw = Math.max(6, Math.min(24, (gw - 14) / (hasPrev ? 2 : 1)));
+    const narrow = W < 520;
+    let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Revenue by day, this week compared with the week before">';
+    for (let v = 0; v <= top + 1e-9; v += step) {
+      const yy = Math.round(y(v)) + 0.5;
+      svg += '<line x1="' + ml + '" x2="' + (W - mr) + '" y1="' + yy + '" y2="' + yy + '" stroke="' + (v === 0 ? 'var(--axis)' : 'var(--grid)') + '" stroke-width="1"/>';
+      svg += '<text x="' + (ml - 8) + '" y="' + (yy + 4) + '" text-anchor="end" font-size="12" fill="var(--muted)" style="font-variant-numeric: tabular-nums">' + esc(f.money(v).replace(/\.00$/, '')) + '</text>';
+    }
+    let best = 0;
+    cur.days.forEach((x, i) => { if (x.revenue > cur.days[best].revenue) best = i; });
+    cur.days.forEach((x, i) => {
+      const gx = ml + i * gw;
+      const pair = hasPrev ? bw * 2 + 2 : bw;
+      const x0 = gx + (gw - pair) / 2;
+      if (hasPrev) { const pv = prev.days[i].revenue; svg += '<path d="' + barPath(x0, y(pv), bw, y(0) - y(pv)) + '" fill="var(--last)"/>'; }
+      const cx = hasPrev ? x0 + bw + 2 : x0;
+      svg += '<path d="' + barPath(cx, y(x.revenue), bw, y(0) - y(x.revenue)) + '" fill="var(--accent)"/>';
+      if (i === best && x.revenue > 0) svg += '<text x="' + (cx + bw / 2) + '" y="' + (y(x.revenue) - 6) + '" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">' + esc(f.money(x.revenue).replace(/\.\d\d$/, '')) + '</text>';
+      const lbl = narrow ? f.weekday(x.date) : f.weekday(x.date) + ' ' + f.short(x.date).replace(/^\w+ /, '');
+      svg += '<text x="' + (gx + gw / 2) + '" y="' + (H - 9) + '" text-anchor="middle" font-size="12" fill="var(--ink-2)">' + esc(lbl) + '</text>';
+      svg += '<rect class="hit" data-i="' + i + '" x="' + gx + '" y="' + mt + '" width="' + gw + '" height="' + ih + '" fill="transparent" tabindex="0" aria-label="' + esc(f.weekday(x.date, true) + ': ' + f.money(x.revenue) + (hasPrev ? ', week before ' + f.money(prev.days[i].revenue) : '')) + '"/>';
+    });
+    svg += '</svg><div class="tip" id="tip" hidden></div>';
+    host.innerHTML = svg;
+
+    const tip = $('tip');
+    const show = (el, evX) => {
+      const i = +el.dataset.i, x = cur.days[i];
+      tip.innerHTML = '<b>' + esc(f.weekday(x.date, true) + ', ' + f.short(x.date)) + '</b>' +
+        '<div><i style="background:var(--accent)"></i>' + f.money(x.revenue) + ' from ' + f.n(x.orders) + (x.orders === 1 ? ' order' : ' orders') + '</div>' +
+        (hasPrev ? '<div><i style="background:var(--last)"></i>Week before: ' + f.money(prev.days[i].revenue) + '</div>' : '');
+      tip.hidden = false;
+      const hostW = host.clientWidth, scale = hostW / W;
+      const centre = (ml + (i + 0.5) * gw) * scale;
+      const tw = tip.offsetWidth;
+      let left = (evX != null ? evX : centre) + 12;
+      if (left + tw > hostW) left = Math.max(0, (evX != null ? evX : centre) - tw - 12);
+      tip.style.left = left + 'px';
+      tip.style.top = (mt * scale) + 'px';
+    };
+    host.querySelectorAll('.hit').forEach(el => {
+      el.addEventListener('pointermove', e => show(el, e.clientX - host.getBoundingClientRect().left));
+      el.addEventListener('pointerdown', e => show(el, e.clientX - host.getBoundingClientRect().left));
+      el.addEventListener('focus', () => show(el, null));
+      el.addEventListener('pointerleave', () => { tip.hidden = true; });
+      el.addEventListener('blur', () => { tip.hidden = true; });
+    });
+  }
+
+  function readFile(file) {
+    if (!file) return;
+    const r = new FileReader();
+    r.onload = () => loadCSV(String(r.result), file.name, false);
+    r.onerror = () => showError('<b>Could not read that file.</b> Make sure it is the CSV exported from Shopify.');
+    r.readAsText(file);
+  }
+
+  $('file').addEventListener('change', e => { readFile(e.target.files[0]); e.target.value = ''; });
+  $('sampleBtn').addEventListener('click', () => loadCSV(makeSampleCSV(localToday()), 'Sample shop', true));
+  $('week').addEventListener('change', e => { state.week = e.target.value; render(); });
+  $('prevWeek').addEventListener('click', () => { const i = state.info.weeks.findIndex(w => w.start === state.week); if (i > 0) { state.week = state.info.weeks[i - 1].start; render(); } });
+  $('nextWeek').addEventListener('click', () => { const i = state.info.weeks.findIndex(w => w.start === state.week); if (i < state.info.weeks.length - 1) { state.week = state.info.weeks[i + 1].start; render(); } });
+
+  $('copyBtn').addEventListener('click', () => {
+    const btn = $('copyBtn'), text = $('summary').textContent;
+    const done = msg => { btn.textContent = msg; setTimeout(() => { btn.textContent = 'Copy summary'; }, 1800); };
+    const fallback = () => {
+      const range = document.createRange(); range.selectNodeContents($('summary'));
+      const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+      done('Selected. Press Ctrl+C');
+    };
+    try { navigator.clipboard.writeText(text).then(() => done('Copied'), fallback); } catch (e) { fallback(); }
+  });
+
+  let depth = 0;
+  window.addEventListener('dragenter', e => { e.preventDefault(); depth++; document.body.classList.add('dropping'); });
+  window.addEventListener('dragover', e => e.preventDefault());
+  window.addEventListener('dragleave', () => { depth = Math.max(0, depth - 1); if (!depth) document.body.classList.remove('dropping'); });
+  window.addEventListener('drop', e => { e.preventDefault(); depth = 0; document.body.classList.remove('dropping'); readFile(e.dataTransfer && e.dataTransfer.files[0]); });
+
+  let lastW = 0;
+  window.addEventListener('resize', () => { const w = $('chart').clientWidth; if (state.data && w !== lastW) { lastW = w; render(); } });
+
+  if (window.Papa) loadCSV(makeSampleCSV(localToday()), 'Sample shop', true);
+  else showError('<b>The CSV reader did not load.</b> Check your internet connection and reload the page.');
+})();
+</script>
+</body>
+</html>
